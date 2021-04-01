@@ -1,0 +1,1716 @@
+1.562464486002914e9 Current date today() = 2019-07-07
+1.562464486142314e9 Current date time now: 2019-07-07T09:54:46.142
+1.562464486221541e9 Bismillah from WRY in Julia script. 
+
+Julia Version 1.1.1
+Commit 55e36cc308 (2019-05-16 04:10 UTC)
+Platform Info:
+  OS: Linux (x86_64-pc-linux-gnu)
+  CPU: Intel(R) Core(TM) i5-3380M CPU @ 2.90GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-6.0.1 (ORCJIT, ivybridge)
+nothing
+
+
+ names(InteractiveUtils) = 
+Symbol[Symbol("@code_llvm"), Symbol("@code_lowered"), Symbol("@code_native"), Symbol("@code_typed"), Symbol("@code_warntype"), Symbol("@edit"), Symbol("@functionloc"), Symbol("@less"), Symbol("@which"), :InteractiveUtils, :apropos, :clipboard, :code_llvm, :code_native, :code_warntype, :edit, :less, :methodswith, :peakflops, :subtypes, :varinfo, :versioninfo]
+
+ varinfo(InteractiveUtils) = 
+| name             |        size | summary                                               |
+|:---------------- | -----------:|:----------------------------------------------------- |
+| @code_llvm       |     0 bytes | getfield(InteractiveUtils, Symbol("#@code_llvm"))     |
+| @code_lowered    |     0 bytes | getfield(InteractiveUtils, Symbol("#@code_lowered"))  |
+| @code_native     |     0 bytes | getfield(InteractiveUtils, Symbol("#@code_native"))   |
+| @code_typed      |     0 bytes | getfield(InteractiveUtils, Symbol("#@code_typed"))    |
+| @code_warntype   |     0 bytes | getfield(InteractiveUtils, Symbol("#@code_warntype")) |
+| @edit            |     0 bytes | getfield(InteractiveUtils, Symbol("#@edit"))          |
+| @functionloc     |     0 bytes | getfield(InteractiveUtils, Symbol("#@functionloc"))   |
+| @less            |     0 bytes | getfield(InteractiveUtils, Symbol("#@less"))          |
+| @which           |     0 bytes | getfield(InteractiveUtils, Symbol("#@which"))         |
+| InteractiveUtils | 170.255 KiB | Module                                                |
+| apropos          |     0 bytes | typeof(apropos)                                       |
+| clipboard        |     0 bytes | typeof(clipboard)                                     |
+| code_llvm        |     0 bytes | typeof(code_llvm)                                     |
+| code_native      |     0 bytes | typeof(code_native)                                   |
+| code_warntype    |     0 bytes | typeof(code_warntype)                                 |
+| edit             |     0 bytes | typeof(edit)                                          |
+| less             |     0 bytes | typeof(less)                                          |
+| methodswith      |     0 bytes | typeof(methodswith)                                   |
+| peakflops        |     0 bytes | typeof(peakflops)                                     |
+| subtypes         |     0 bytes | typeof(subtypes)                                      |
+| varinfo          |     0 bytes | typeof(varinfo)                                       |
+| versioninfo      |     0 bytes | typeof(versioninfo)                                   |
+
+
+ typeof(InteractiveUtils) = 
+Module
+
+ names(Base) = 
+Symbol[:!, :!=, :!==, :%, :&, :*, :+, :-, :/, ://, :(:), :<, :<:, :<<, :<=, :(==), :(=>), :>, :>:, :>=, :>>, :>>>, Symbol("@MIME_str"), Symbol("@__DIR__"), Symbol("@__FILE__"), Symbol("@__LINE__"), Symbol("@__MODULE__"), Symbol("@__dot__"), Symbol("@allocated"), Symbol("@assert"), Symbol("@async"), Symbol("@b_str"), Symbol("@big_str"), Symbol("@boundscheck"), Symbol("@cfunction"), Symbol("@cmd"), Symbol("@debug"), Symbol("@deprecate"), Symbol("@doc"), Symbol("@elapsed"), Symbol("@enum"), Symbol("@error"), Symbol("@eval"), Symbol("@evalpoly"), Symbol("@fastmath"), Symbol("@generated"), Symbol("@gensym"), Symbol("@goto"), Symbol("@html_str"), Symbol("@inbounds"), Symbol("@info"), Symbol("@inline"), Symbol("@int128_str"), Symbol("@isdefined"), Symbol("@label"), Symbol("@macroexpand"), Symbol("@macroexpand1"), Symbol("@noinline"), Symbol("@nospecialize"), Symbol("@polly"), Symbol("@r_str"), Symbol("@raw_str"), Symbol("@s_str"), Symbol("@show"), Symbol("@simd"), Symbol("@specialize"), Symbol("@static"), Symbol("@sync"), Symbol("@task"), Symbol("@text_str"), Symbol("@threadcall"), Symbol("@time"), Symbol("@timed"), Symbol("@timev"), Symbol("@uint128_str"), Symbol("@v_str"), Symbol("@view"), Symbol("@views"), Symbol("@warn"), :ARGS, :AbstractChannel, :AbstractDict, :AbstractDisplay, :AbstractIrrational, :AbstractMatrix, :AbstractRange, :AbstractSet, :AbstractUnitRange, :AbstractVecOrMat, :AbstractVector, :Array, :Base, :BigFloat, :BigInt, :BitArray, :BitMatrix, :BitSet, :BitVector, :Broadcast, :C_NULL, :CapturedException, :CartesianIndex, :CartesianIndices, :Cchar, :Cdouble, :Cfloat, :Channel, :Cint, :Cintmax_t, :Clong, :Clonglong, :Cmd, :Colon, :Complex, :ComplexF16, :ComplexF32, :ComplexF64, :CompositeException, :Condition, :Cptrdiff_t, :Cshort, :Csize_t, :Cssize_t, :Cstring, :Cuchar, :Cuint, :Cuintmax_t, :Culong, :Culonglong, :Cushort, :Cwchar_t, :Cwstring, :DEPOT_PATH, :DenseMatrix, :DenseVecOrMat, :DenseVector, :Dict, :DimensionMismatch, :Dims, :Docs, :ENDIAN_BOM, :ENV, :EOFError, :Enum, :ExponentialBackOff, :GC, :HTML, :IOBuffer, :IOContext, :IOStream, :IdDict, :IndexCartesian, :IndexLinear, :IndexStyle, :Inf, :Inf16, :Inf32, :Inf64, :InsertionSort, :InvalidStateException, :Irrational, :Iterators, :KeyError, :LOAD_PATH, :Libc, :LinRange, :LinearIndices, :MIME, :MathConstants, :Matrix, :MergeSort, :Meta, :Missing, :MissingException, :NTuple, :NaN, :NaN16, :NaN32, :NaN64, :OrdinalRange, :PROGRAM_FILE, :Pair, :PartialQuickSort, :PermutedDimsArray, :Pipe, :PipeBuffer, :QuickSort, :Rational, :RawFD, :ReentrantLock, :Regex, :RegexMatch, :RoundDown, :RoundFromZero, :RoundNearest, :RoundNearestTiesAway, :RoundNearestTiesUp, :RoundToZero, :RoundUp, :RoundingMode, :Set, :Some, :StackTraces, :StepRange, :StepRangeLen, :StridedArray, :StridedMatrix, :StridedVecOrMat, :StridedVector, :StringIndexError, :SubArray, :SubString, :SubstitutionString, :Sys, :SystemError, :Text, :TextDisplay, :Threads, :Timer, :UnitRange, :VERSION, :Val, :VecOrMat, :Vector, :VersionNumber, :WeakKeyDict, :\, :^, :__precompile__, :abs, :abs2, :abspath, :accumulate, :accumulate!, :acos, :acosd, :acosh, :acot, :acotd, :acoth, :acsc, :acscd, :acsch, :adjoint, :all, :all!, :allunique, :angle, :any, :any!, :append!, :argmax, :argmin, :ascii, :asec, :asecd, :asech, :asin, :asind, :asinh, :asyncmap, :asyncmap!, :atan, :atand, :atanh, :atexit, :atreplinit, :axes, :backtrace, :basename, :big, :bind, :binomial, :bitstring, :broadcast, :broadcast!, :bswap, :bytes2hex, :bytesavailable, :cat, :catch_backtrace, :cbrt, :cd, :ceil, :cglobal, :checkbounds, :checkindex, :chmod, :chomp, :chop, :chown, :circcopy!, :circshift, :circshift!, :cis, :clamp, :clamp!, :cld, :close, :cmp, :coalesce, :code_lowered, :code_typed, :codepoint, :codeunit, :codeunits, :collect, :complex, :conj, :conj!, :convert, :copy, :copy!, :copysign, :copyto!, :cos, :cosc, :cosd, :cosh, :cospi, :cot, :cotd, :coth, :count, :count_ones, :count_zeros, :countlines, :cp, :csc, :cscd, :csch, :ctime, :cumprod, :cumprod!, :cumsum, :cumsum!, :current_task, :deepcopy, :deg2rad, :delete!, :deleteat!, :denominator, :detach, :devnull, :diff, :digits, :digits!, :dirname, :disable_sigint, :display, :displayable, :displaysize, :div, :divrem, :download, :dropdims, :dump, :eachcol, :eachindex, :eachline, :eachmatch, :eachrow, :eachslice, :eltype, :empty, :empty!, :endswith, :enumerate, :eof, :eps, :error, :esc, :escape_string, :evalfile, :exit, :exp, :exp10, :exp2, :expanduser, :expm1, :exponent, :extrema, :factorial, :falses, :fd, :fdio, :fetch, :fieldcount, :fieldname, :fieldnames, :fieldoffset, :fieldtypes, :filemode, :filesize, :fill, :fill!, :filter, :filter!, :finalize, :finalizer, :findall, :findfirst, :findlast, :findmax, :findmax!, :findmin, :findmin!, :findnext, :findprev, :first, :firstindex, :fld, :fld1, :fldmod, :fldmod1, :flipsign, :float, :floatmax, :floatmin, :floor, :flush, :fma, :foldl, :foldr, :foreach, :frexp, :fullname, :functionloc, :gcd, :gcdx, :gensym, :get, :get!, :get_zero_subnormals, :gethostname, :getindex, :getkey, :getpid, :getproperty, :gperm, :hash, :haskey, :hasmethod, :hcat, :hex2bytes, :hex2bytes!, :homedir, :htol, :hton, :hvcat, :hypot, :identity, :ifelse, :ignorestatus, :im, :imag, :in, :include_dependency, :include_string, :indexin, :insert!, :instances, :intersect, :intersect!, :inv, :invmod, :invperm, :invpermute!, :isabspath, :isabstracttype, :isapprox, :isascii, :isassigned, :isbits, :isbitstype, :isblockdev, :ischardev, :iscntrl, :isconcretetype, :isconst, :isdigit, :isdir, :isdirpath, :isdispatchtuple, :isempty, :isequal, :iseven, :isfifo, :isfile, :isfinite, :isimmutable, :isinf, :isinteger, :isinteractive, :isless, :isletter, :islink, :islocked, :islowercase, :ismarked, :ismissing, :ismount, :isnan, :isnothing, :isnumeric, :isodd, :isone, :isopen, :ispath, :isperm, :ispow2, :isprimitivetype, :isprint, :ispunct, :isqrt, :isreadable, :isreadonly, :isready, :isreal, :issetequal, :issetgid, :issetuid, :issocket, :issorted, :isspace, :issticky, :isstructtype, :issubnormal, :issubset, :istaskdone, :istaskstarted, :istextmime, :isuppercase, :isvalid, :iswritable, :isxdigit, :iszero, :iterate, :join, :joinpath, :keys, :keytype, :kill, :kron, :last, :lastindex, :lcm, :ldexp, :leading_ones, :leading_zeros, :length, :lock, :log, :log10, :log1p, :log2, :lowercase, :lowercasefirst, :lpad, :lstat, :lstrip, :ltoh, :macroexpand, :map, :map!, :mapfoldl, :mapfoldr, :mapreduce, :mapslices, :mark, :match, :max, :maximum, :maximum!, :maxintfloat, :merge, :merge!, :methods, :min, :minimum, :minimum!, :minmax, :missing, :mkdir, :mkpath, :mktemp, :mktempdir, :mod, :mod1, :mod2pi, :modf, :mtime, :muladd, :mv, :nameof, :names, :ncodeunits, :ndigits, :ndims, :nextfloat, :nextind, :nextpow, :nextprod, :normpath, :notify, :ntoh, :ntuple, :numerator, :objectid, :occursin, :oftype, :one, :ones, :oneunit, :open, :operm, :pairs, :parent, :parentindices, :parentmodule, :parse, :partialsort, :partialsort!, :partialsortperm, :partialsortperm!, :pathof, :permute!, :permutedims, :permutedims!, :pi, :pipeline, :pointer, :pointer_from_objref, :pop!, :popdisplay, :popfirst!, :position, :powermod, :precision, :precompile, :prepend!, :prevfloat, :prevind, :prevpow, :print, :println, :printstyled, :process_exited, :process_running, :prod, :prod!, :promote, :promote_rule, :promote_shape, :promote_type, :propertynames, :push!, :pushdisplay, :pushfirst!, :put!, :pwd, :rad2deg, :rand, :randn, :range, :rationalize, :read, :read!, :readavailable, :readbytes!, :readchomp, :readdir, :readline, :readlines, :readlink, :readuntil, :real, :realpath, :redirect_stderr, :redirect_stdin, :redirect_stdout, :redisplay, :reduce, :reenable_sigint, :reim, :reinterpret, :relpath, :rem, :rem2pi, :repeat, :replace, :replace!, :repr, :reset, :reshape, :resize!, :rethrow, :retry, :reverse, :reverse!, :reverseind, :rm, :rot180, :rotl90, :rotr90, :round, :rounding, :rpad, :rsplit, :rstrip, :run, :schedule, :searchsorted, :searchsortedfirst, :searchsortedlast, :sec, :secd, :sech, :seek, :seekend, :seekstart, :selectdim, :set_zero_subnormals, :setdiff, :setdiff!, :setenv, :setindex!, :setprecision, :setproperty!, :setrounding, :show, :showable, :showerror, :sign, :signbit, :signed, :significand, :similar, :sin, :sinc, :sincos, :sind, :sinh, :sinpi, :size, :sizehint!, :sizeof, :skip, :skipchars, :skipmissing, :sleep, :something, :sort, :sort!, :sortperm, :sortperm!, :sortslices, :splice!, :split, :splitdir, :splitdrive, :splitext, :splitpath, :sprint, :sqrt, :stacktrace, :startswith, :stat, :stderr, :stdin, :stdout, :step, :stride, :strides, :string, :strip, :success, :sum, :sum!, :summary, :supertype, :symdiff, :symdiff!, :symlink, :systemerror, :take!, :tan, :tand, :tanh, :task_local_storage, :tempdir, :tempname, :textwidth, :thisind, :time, :time_ns, :timedwait, :titlecase, :to_indices, :touch, :trailing_ones, :trailing_zeros, :transcode, :transpose, :trues, :trunc, :truncate, :trylock, :tryparse, :typeintersect, :typejoin, :typemax, :typemin, :unescape_string, :union, :union!, :unique, :unique!, :unlock, :unmark, :unsafe_copyto!, :unsafe_load, :unsafe_pointer_to_objref, :unsafe_read, :unsafe_store!, :unsafe_string, :unsafe_trunc, :unsafe_wrap, :unsafe_write, :unsigned, :uperm, :uppercase, :uppercasefirst, :valtype, :values, :vcat, :vec, :view, :wait, :walkdir, :which, :widemul, :widen, :withenv, :write, :xor, :yield, :yieldto, :zero, :zeros, :zip, :|, :|>, :~, :÷, :π, :ℯ, :∈, :∉, :∋, :∌, :∘, :√, :∛, :∩, :∪, :≈, :≉, :≠, :≡, :≢, :≤, :≥, :⊆, :⊇, :⊈, :⊉, :⊊, :⊋, :⊻]
+
+ varinfo(Base) = 
+| name                     |        size | summary                                       |
+|:------------------------ | -----------:|:--------------------------------------------- |
+| !                        |     0 bytes | typeof(!)                                     |
+| !=                       |     0 bytes | typeof(!=)                                    |
+| !==                      |     0 bytes | typeof(!==)                                   |
+| %                        |     0 bytes | typeof(rem)                                   |
+| &                        |     0 bytes | typeof(&)                                     |
+| *                        |     0 bytes | typeof(*)                                     |
+| +                        |     0 bytes | typeof(+)                                     |
+| -                        |     0 bytes | typeof(-)                                     |
+| /                        |     0 bytes | typeof(/)                                     |
+| //                       |     0 bytes | typeof(//)                                    |
+| :                        |     0 bytes | Colon                                         |
+| <                        |     0 bytes | typeof(<)                                     |
+| <:                       |     0 bytes | typeof(<:)                                    |
+| <<                       |     0 bytes | typeof(<<)                                    |
+| <=                       |     0 bytes | typeof(<=)                                    |
+| ==                       |     0 bytes | typeof(==)                                    |
+| =>                       |    80 bytes | UnionAll                                      |
+| >                        |     0 bytes | typeof(>)                                     |
+| >:                       |     0 bytes | typeof(>:)                                    |
+| >=                       |     0 bytes | typeof(>=)                                    |
+| >>                       |     0 bytes | typeof(>>)                                    |
+| >>>                      |     0 bytes | typeof(>>>)                                   |
+| @MIME_str                |     0 bytes | getfield(Base, Symbol("#@MIME_str"))          |
+| @__DIR__                 |     0 bytes | getfield(Base, Symbol("#@__DIR__"))           |
+| @__FILE__                |     0 bytes | getfield(Base, Symbol("#@__FILE__"))          |
+| @__LINE__                |     0 bytes | getfield(Base, Symbol("#@__LINE__"))          |
+| @__MODULE__              |     0 bytes | getfield(Base, Symbol("#@__MODULE__"))        |
+| @__dot__                 |     0 bytes | getfield(Base.Broadcast, Symbol("#@__dot__")) |
+| @allocated               |     0 bytes | getfield(Base, Symbol("#@allocated"))         |
+| @assert                  |     0 bytes | getfield(Base, Symbol("#@assert"))            |
+| @async                   |     0 bytes | getfield(Base, Symbol("#@async"))             |
+| @b_str                   |     0 bytes | getfield(Base, Symbol("#@b_str"))             |
+| @big_str                 |     0 bytes | getfield(Core, Symbol("#@big_str"))           |
+| @boundscheck             |     0 bytes | getfield(Base, Symbol("#@boundscheck"))       |
+| @cfunction               |     0 bytes | getfield(Base, Symbol("#@cfunction"))         |
+| @cmd                     |     0 bytes | getfield(Core, Symbol("#@cmd"))               |
+| @debug                   |     0 bytes | getfield(Base.CoreLogging, Symbol("#@debug")) |
+| @deprecate               |     0 bytes | getfield(Base, Symbol("#@deprecate"))         |
+| @doc                     |     0 bytes | getfield(Core, Symbol("#@doc"))               |
+| @elapsed                 |     0 bytes | getfield(Base, Symbol("#@elapsed"))           |
+| @enum                    |     0 bytes | getfield(Base.Enums, Symbol("#@enum"))        |
+| @error                   |     0 bytes | getfield(Base.CoreLogging, Symbol("#@error")) |
+| @eval                    |     0 bytes | getfield(Base, Symbol("#@eval"))              |
+| @evalpoly                |     0 bytes | getfield(Base.Math, Symbol("#@evalpoly"))     |
+| @fastmath                |     0 bytes | getfield(Base.FastMath, Symbol("#@fastmath")) |
+| @generated               |     0 bytes | getfield(Base, Symbol("#@generated"))         |
+| @gensym                  |     0 bytes | getfield(Base, Symbol("#@gensym"))            |
+| @goto                    |     0 bytes | getfield(Base, Symbol("#@goto"))              |
+| @html_str                |     0 bytes | getfield(Base.Docs, Symbol("#@html_str"))     |
+| @inbounds                |     0 bytes | getfield(Base, Symbol("#@inbounds"))          |
+| @info                    |     0 bytes | getfield(Base.CoreLogging, Symbol("#@info"))  |
+| @inline                  |     0 bytes | getfield(Base, Symbol("#@inline"))            |
+| @int128_str              |     0 bytes | getfield(Core, Symbol("#@int128_str"))        |
+| @isdefined               |     0 bytes | getfield(Base, Symbol("#@isdefined"))         |
+| @label                   |     0 bytes | getfield(Base, Symbol("#@label"))             |
+| @macroexpand             |     0 bytes | getfield(Base, Symbol("#@macroexpand"))       |
+| @macroexpand1            |     0 bytes | getfield(Base, Symbol("#@macroexpand1"))      |
+| @noinline                |     0 bytes | getfield(Base, Symbol("#@noinline"))          |
+| @nospecialize            |     0 bytes | getfield(Base, Symbol("#@nospecialize"))      |
+| @polly                   |     0 bytes | getfield(Base, Symbol("#@polly"))             |
+| @r_str                   |     0 bytes | getfield(Base, Symbol("#@r_str"))             |
+| @raw_str                 |     0 bytes | getfield(Base, Symbol("#@raw_str"))           |
+| @s_str                   |     0 bytes | getfield(Base, Symbol("#@s_str"))             |
+| @show                    |     0 bytes | getfield(Base, Symbol("#@show"))              |
+| @simd                    |     0 bytes | getfield(Base.SimdLoop, Symbol("#@simd"))     |
+| @specialize              |     0 bytes | getfield(Base, Symbol("#@specialize"))        |
+| @static                  |     0 bytes | getfield(Base, Symbol("#@static"))            |
+| @sync                    |     0 bytes | getfield(Base, Symbol("#@sync"))              |
+| @task                    |     0 bytes | getfield(Base, Symbol("#@task"))              |
+| @text_str                |     0 bytes | getfield(Base.Docs, Symbol("#@text_str"))     |
+| @threadcall              |     0 bytes | getfield(Base, Symbol("#@threadcall"))        |
+| @time                    |     0 bytes | getfield(Base, Symbol("#@time"))              |
+| @timed                   |     0 bytes | getfield(Base, Symbol("#@timed"))             |
+| @timev                   |     0 bytes | getfield(Base, Symbol("#@timev"))             |
+| @uint128_str             |     0 bytes | getfield(Core, Symbol("#@uint128_str"))       |
+| @v_str                   |     0 bytes | getfield(Base, Symbol("#@v_str"))             |
+| @view                    |     0 bytes | getfield(Base, Symbol("#@view"))              |
+| @views                   |     0 bytes | getfield(Base, Symbol("#@views"))             |
+| @warn                    |     0 bytes | getfield(Base.CoreLogging, Symbol("#@warn"))  |
+| ARGS                     |    40 bytes | 0-element Array{String,1}                     |
+| AbstractChannel          |    40 bytes | UnionAll                                      |
+| AbstractDict             |    80 bytes | UnionAll                                      |
+| AbstractDisplay          |   172 bytes | DataType                                      |
+| AbstractIrrational       |   172 bytes | DataType                                      |
+| AbstractMatrix           |    40 bytes | UnionAll                                      |
+| AbstractRange            |    40 bytes | UnionAll                                      |
+| AbstractSet              |    40 bytes | UnionAll                                      |
+| AbstractUnitRange        |    40 bytes | UnionAll                                      |
+| AbstractVecOrMat         |    56 bytes | UnionAll                                      |
+| AbstractVector           |    40 bytes | UnionAll                                      |
+| Array                    |    80 bytes | UnionAll                                      |
+| Base                     |             | Module                                        |
+| BigFloat                 |   220 bytes | DataType                                      |
+| BigInt                   |   204 bytes | DataType                                      |
+| BitArray                 |    40 bytes | UnionAll                                      |
+| BitMatrix                |   220 bytes | DataType                                      |
+| BitSet                   |   196 bytes | DataType                                      |
+| BitVector                |   220 bytes | DataType                                      |
+| Broadcast                | 935.350 KiB | Module                                        |
+| C_NULL                   |     8 bytes | Ptr{Nothing}                                  |
+| CapturedException        |   196 bytes | DataType                                      |
+| CartesianIndex           |    40 bytes | UnionAll                                      |
+| CartesianIndices         |    80 bytes | UnionAll                                      |
+| Cchar                    |   172 bytes | DataType                                      |
+| Cdouble                  |   172 bytes | DataType                                      |
+| Cfloat                   |   172 bytes | DataType                                      |
+| Channel                  |    40 bytes | UnionAll                                      |
+| Cint                     |   172 bytes | DataType                                      |
+| Cintmax_t                |   172 bytes | DataType                                      |
+| Clong                    |   172 bytes | DataType                                      |
+| Clonglong                |   172 bytes | DataType                                      |
+| Cmd                      |   276 bytes | DataType                                      |
+| Colon                    |   172 bytes | DataType                                      |
+| Complex                  |    40 bytes | UnionAll                                      |
+| ComplexF16               |   204 bytes | DataType                                      |
+| ComplexF32               |   204 bytes | DataType                                      |
+| ComplexF64               |   204 bytes | DataType                                      |
+| CompositeException       |   188 bytes | DataType                                      |
+| Condition                |   188 bytes | DataType                                      |
+| Cptrdiff_t               |   172 bytes | DataType                                      |
+| Cshort                   |   172 bytes | DataType                                      |
+| Csize_t                  |   172 bytes | DataType                                      |
+| Cssize_t                 |   172 bytes | DataType                                      |
+| Cstring                  |   172 bytes | DataType                                      |
+| Cuchar                   |   172 bytes | DataType                                      |
+| Cuint                    |   172 bytes | DataType                                      |
+| Cuintmax_t               |   172 bytes | DataType                                      |
+| Culong                   |   172 bytes | DataType                                      |
+| Culonglong               |   172 bytes | DataType                                      |
+| Cushort                  |   172 bytes | DataType                                      |
+| Cwchar_t                 |   172 bytes | DataType                                      |
+| Cwstring                 |   172 bytes | DataType                                      |
+| DEPOT_PATH               |   190 bytes | 3-element Array{String,1}                     |
+| DenseMatrix              |    40 bytes | UnionAll                                      |
+| DenseVecOrMat            |    56 bytes | UnionAll                                      |
+| DenseVector              |    40 bytes | UnionAll                                      |
+| Dict                     |    80 bytes | UnionAll                                      |
+| DimensionMismatch        |   188 bytes | DataType                                      |
+| Dims                     |    40 bytes | UnionAll                                      |
+| Docs                     | 315.074 KiB | Module                                        |
+| ENDIAN_BOM               |     4 bytes | UInt32                                        |
+| ENV                      |     0 bytes | Base.EnvDict with 68 entries                  |
+| EOFError                 |   172 bytes | DataType                                      |
+| Enum                     |    40 bytes | UnionAll                                      |
+| ExponentialBackOff       |   220 bytes | DataType                                      |
+| GC                       |  12.016 KiB | Module                                        |
+| HTML                     |    40 bytes | UnionAll                                      |
+| IOBuffer                 |   260 bytes | DataType                                      |
+| IOContext                |    40 bytes | UnionAll                                      |
+| IOStream                 |   212 bytes | DataType                                      |
+| IdDict                   |    80 bytes | UnionAll                                      |
+| IndexCartesian           |   172 bytes | DataType                                      |
+| IndexLinear              |   172 bytes | DataType                                      |
+| IndexStyle               |   172 bytes | DataType                                      |
+| Inf                      |     8 bytes | Float64                                       |
+| Inf16                    |     2 bytes | Float16                                       |
+| Inf32                    |     4 bytes | Float32                                       |
+| Inf64                    |     8 bytes | Float64                                       |
+| InsertionSort            |     0 bytes | Base.Sort.InsertionSortAlg                    |
+| InvalidStateException    |   196 bytes | DataType                                      |
+| Irrational               |    40 bytes | UnionAll                                      |
+| Iterators                | 560.812 KiB | Module                                        |
+| KeyError                 |   188 bytes | DataType                                      |
+| LOAD_PATH                |   101 bytes | 3-element Array{String,1}                     |
+| Libc                     |  65.661 KiB | Module                                        |
+| LinRange                 |    40 bytes | UnionAll                                      |
+| LinearIndices            |    80 bytes | UnionAll                                      |
+| MIME                     |    40 bytes | UnionAll                                      |
+| MathConstants            |  23.643 KiB | Module                                        |
+| Matrix                   |    40 bytes | UnionAll                                      |
+| MergeSort                |     0 bytes | Base.Sort.MergeSortAlg                        |
+| Meta                     |  68.054 KiB | Module                                        |
+| Missing                  |   172 bytes | DataType                                      |
+| MissingException         |   188 bytes | DataType                                      |
+| NTuple                   |    80 bytes | UnionAll                                      |
+| NaN                      |     8 bytes | Float64                                       |
+| NaN16                    |     2 bytes | Float16                                       |
+| NaN32                    |     4 bytes | Float32                                       |
+| NaN64                    |     8 bytes | Float64                                       |
+| OrdinalRange             |    80 bytes | UnionAll                                      |
+| PROGRAM_FILE             |    33 bytes | String                                        |
+| Pair                     |    80 bytes | UnionAll                                      |
+| PartialQuickSort         |   136 bytes | UnionAll                                      |
+| PermutedDimsArray        |   280 bytes | UnionAll                                      |
+| Pipe                     |   196 bytes | DataType                                      |
+| PipeBuffer               |     0 bytes | typeof(PipeBuffer)                            |
+| QuickSort                |     0 bytes | Base.Sort.QuickSortAlg                        |
+| Rational                 |    40 bytes | UnionAll                                      |
+| RawFD                    |   172 bytes | DataType                                      |
+| ReentrantLock            |   220 bytes | DataType                                      |
+| Regex                    |   236 bytes | DataType                                      |
+| RegexMatch               |   220 bytes | DataType                                      |
+| RoundDown                |     0 bytes | RoundingMode{:Down}                           |
+| RoundFromZero            |     0 bytes | RoundingMode{:FromZero}                       |
+| RoundNearest             |     0 bytes | RoundingMode{:Nearest}                        |
+| RoundNearestTiesAway     |     0 bytes | RoundingMode{:NearestTiesAway}                |
+| RoundNearestTiesUp       |     0 bytes | RoundingMode{:NearestTiesUp}                  |
+| RoundToZero              |     0 bytes | RoundingMode{:ToZero}                         |
+| RoundUp                  |     0 bytes | RoundingMode{:Up}                             |
+| RoundingMode             |    40 bytes | UnionAll                                      |
+| Set                      |    40 bytes | UnionAll                                      |
+| Some                     |    40 bytes | UnionAll                                      |
+| StackTraces              |  64.604 KiB | Module                                        |
+| StepRange                |    80 bytes | UnionAll                                      |
+| StepRangeLen             |   120 bytes | UnionAll                                      |
+| StridedArray             |   968 bytes | UnionAll                                      |
+| StridedMatrix            |   928 bytes | UnionAll                                      |
+| StridedVecOrMat          |   1.078 KiB | UnionAll                                      |
+| StridedVector            |   928 bytes | UnionAll                                      |
+| StringIndexError         |   196 bytes | DataType                                      |
+| SubArray                 |   200 bytes | UnionAll                                      |
+| SubString                |    40 bytes | UnionAll                                      |
+| SubstitutionString       |    40 bytes | UnionAll                                      |
+| Sys                      |  81.312 KiB | Module                                        |
+| SystemError              |   204 bytes | DataType                                      |
+| Text                     |    40 bytes | UnionAll                                      |
+| TextDisplay              |   188 bytes | DataType                                      |
+| Threads                  | 162.645 KiB | Module                                        |
+| Timer                    |   204 bytes | DataType                                      |
+| UnitRange                |    40 bytes | UnionAll                                      |
+| VERSION                  |    32 bytes | VersionNumber                                 |
+| Val                      |    40 bytes | UnionAll                                      |
+| VecOrMat                 |    56 bytes | UnionAll                                      |
+| Vector                   |    40 bytes | UnionAll                                      |
+| VersionNumber            |   220 bytes | DataType                                      |
+| WeakKeyDict              |    80 bytes | UnionAll                                      |
+| \                        |     0 bytes | typeof(\)                                     |
+| ^                        |     0 bytes | typeof(^)                                     |
+| __precompile__           |     0 bytes | typeof(__precompile__)                        |
+| abs                      |     0 bytes | typeof(abs)                                   |
+| abs2                     |     0 bytes | typeof(abs2)                                  |
+| abspath                  |     0 bytes | typeof(abspath)                               |
+| accumulate               |     0 bytes | typeof(accumulate)                            |
+| accumulate!              |     0 bytes | typeof(accumulate!)                           |
+| acos                     |     0 bytes | typeof(acos)                                  |
+| acosd                    |     0 bytes | typeof(acosd)                                 |
+| acosh                    |     0 bytes | typeof(acosh)                                 |
+| acot                     |     0 bytes | typeof(acot)                                  |
+| acotd                    |     0 bytes | typeof(acotd)                                 |
+| acoth                    |     0 bytes | typeof(acoth)                                 |
+| acsc                     |     0 bytes | typeof(acsc)                                  |
+| acscd                    |     0 bytes | typeof(acscd)                                 |
+| acsch                    |     0 bytes | typeof(acsch)                                 |
+| adjoint                  |     0 bytes | typeof(adjoint)                               |
+| all                      |     0 bytes | typeof(all)                                   |
+| all!                     |     0 bytes | typeof(all!)                                  |
+| allunique                |     0 bytes | typeof(allunique)                             |
+| angle                    |     0 bytes | typeof(angle)                                 |
+| any                      |     0 bytes | typeof(any)                                   |
+| any!                     |     0 bytes | typeof(any!)                                  |
+| append!                  |     0 bytes | typeof(append!)                               |
+| argmax                   |     0 bytes | typeof(argmax)                                |
+| argmin                   |     0 bytes | typeof(argmin)                                |
+| ascii                    |     0 bytes | typeof(ascii)                                 |
+| asec                     |     0 bytes | typeof(asec)                                  |
+| asecd                    |     0 bytes | typeof(asecd)                                 |
+| asech                    |     0 bytes | typeof(asech)                                 |
+| asin                     |     0 bytes | typeof(asin)                                  |
+| asind                    |     0 bytes | typeof(asind)                                 |
+| asinh                    |     0 bytes | typeof(asinh)                                 |
+| asyncmap                 |     0 bytes | typeof(asyncmap)                              |
+| asyncmap!                |     0 bytes | typeof(asyncmap!)                             |
+| atan                     |     0 bytes | typeof(atan)                                  |
+| atand                    |     0 bytes | typeof(atand)                                 |
+| atanh                    |     0 bytes | typeof(atanh)                                 |
+| atexit                   |     0 bytes | typeof(atexit)                                |
+| atreplinit               |     0 bytes | typeof(atreplinit)                            |
+| axes                     |     0 bytes | typeof(axes)                                  |
+| backtrace                |     0 bytes | typeof(backtrace)                             |
+| basename                 |     0 bytes | typeof(basename)                              |
+| big                      |     0 bytes | typeof(big)                                   |
+| bind                     |     0 bytes | typeof(bind)                                  |
+| binomial                 |     0 bytes | typeof(binomial)                              |
+| bitstring                |     0 bytes | typeof(bitstring)                             |
+| broadcast                |     0 bytes | typeof(broadcast)                             |
+| broadcast!               |     0 bytes | typeof(broadcast!)                            |
+| bswap                    |     0 bytes | typeof(bswap)                                 |
+| bytes2hex                |     0 bytes | typeof(bytes2hex)                             |
+| bytesavailable           |     0 bytes | typeof(bytesavailable)                        |
+| cat                      |     0 bytes | typeof(cat)                                   |
+| catch_backtrace          |     0 bytes | typeof(catch_backtrace)                       |
+| cbrt                     |     0 bytes | typeof(cbrt)                                  |
+| cd                       |     0 bytes | typeof(cd)                                    |
+| ceil                     |     0 bytes | typeof(ceil)                                  |
+| cglobal                  |     4 bytes | Core.IntrinsicFunction                        |
+| checkbounds              |     0 bytes | typeof(checkbounds)                           |
+| checkindex               |     0 bytes | typeof(checkindex)                            |
+| chmod                    |     0 bytes | typeof(chmod)                                 |
+| chomp                    |     0 bytes | typeof(chomp)                                 |
+| chop                     |     0 bytes | typeof(chop)                                  |
+| chown                    |     0 bytes | typeof(chown)                                 |
+| circcopy!                |     0 bytes | typeof(circcopy!)                             |
+| circshift                |     0 bytes | typeof(circshift)                             |
+| circshift!               |     0 bytes | typeof(circshift!)                            |
+| cis                      |     0 bytes | typeof(cis)                                   |
+| clamp                    |     0 bytes | typeof(clamp)                                 |
+| clamp!                   |     0 bytes | typeof(clamp!)                                |
+| cld                      |     0 bytes | typeof(cld)                                   |
+| close                    |     0 bytes | typeof(close)                                 |
+| cmp                      |     0 bytes | typeof(cmp)                                   |
+| coalesce                 |     0 bytes | typeof(coalesce)                              |
+| code_lowered             |     0 bytes | typeof(code_lowered)                          |
+| code_typed               |     0 bytes | typeof(code_typed)                            |
+| codepoint                |     0 bytes | typeof(codepoint)                             |
+| codeunit                 |     0 bytes | typeof(codeunit)                              |
+| codeunits                |     0 bytes | typeof(codeunits)                             |
+| collect                  |     0 bytes | typeof(collect)                               |
+| complex                  |     0 bytes | typeof(complex)                               |
+| conj                     |     0 bytes | typeof(conj)                                  |
+| conj!                    |     0 bytes | typeof(conj!)                                 |
+| convert                  |     0 bytes | typeof(convert)                               |
+| copy                     |     0 bytes | typeof(copy)                                  |
+| copy!                    |     0 bytes | typeof(copy!)                                 |
+| copysign                 |     0 bytes | typeof(copysign)                              |
+| copyto!                  |     0 bytes | typeof(copyto!)                               |
+| cos                      |     0 bytes | typeof(cos)                                   |
+| cosc                     |     0 bytes | typeof(cosc)                                  |
+| cosd                     |     0 bytes | typeof(cosd)                                  |
+| cosh                     |     0 bytes | typeof(cosh)                                  |
+| cospi                    |     0 bytes | typeof(cospi)                                 |
+| cot                      |     0 bytes | typeof(cot)                                   |
+| cotd                     |     0 bytes | typeof(cotd)                                  |
+| coth                     |     0 bytes | typeof(coth)                                  |
+| count                    |     0 bytes | typeof(count)                                 |
+| count_ones               |     0 bytes | typeof(count_ones)                            |
+| count_zeros              |     0 bytes | typeof(count_zeros)                           |
+| countlines               |     0 bytes | typeof(countlines)                            |
+| cp                       |     0 bytes | typeof(cp)                                    |
+| csc                      |     0 bytes | typeof(csc)                                   |
+| cscd                     |     0 bytes | typeof(cscd)                                  |
+| csch                     |     0 bytes | typeof(csch)                                  |
+| ctime                    |     0 bytes | typeof(ctime)                                 |
+| cumprod                  |     0 bytes | typeof(cumprod)                               |
+| cumprod!                 |     0 bytes | typeof(cumprod!)                              |
+| cumsum                   |     0 bytes | typeof(cumsum)                                |
+| cumsum!                  |     0 bytes | typeof(cumsum!)                               |
+| current_task             |     0 bytes | typeof(current_task)                          |
+| deepcopy                 |     0 bytes | typeof(deepcopy)                              |
+| deg2rad                  |     0 bytes | typeof(deg2rad)                               |
+| delete!                  |     0 bytes | typeof(delete!)                               |
+| deleteat!                |     0 bytes | typeof(deleteat!)                             |
+| denominator              |     0 bytes | typeof(denominator)                           |
+| detach                   |     0 bytes | typeof(detach)                                |
+| devnull                  |     0 bytes | Base.DevNull                                  |
+| diff                     |     0 bytes | typeof(diff)                                  |
+| digits                   |     0 bytes | typeof(digits)                                |
+| digits!                  |     0 bytes | typeof(digits!)                               |
+| dirname                  |     0 bytes | typeof(dirname)                               |
+| disable_sigint           |     0 bytes | typeof(disable_sigint)                        |
+| display                  |     0 bytes | typeof(display)                               |
+| displayable              |     0 bytes | typeof(displayable)                           |
+| displaysize              |     0 bytes | typeof(displaysize)                           |
+| div                      |     0 bytes | typeof(div)                                   |
+| divrem                   |     0 bytes | typeof(divrem)                                |
+| download                 |     0 bytes | typeof(download)                              |
+| dropdims                 |     0 bytes | typeof(dropdims)                              |
+| dump                     |     0 bytes | typeof(dump)                                  |
+| eachcol                  |     0 bytes | typeof(eachcol)                               |
+| eachindex                |     0 bytes | typeof(eachindex)                             |
+| eachline                 |     0 bytes | typeof(eachline)                              |
+| eachmatch                |     0 bytes | typeof(eachmatch)                             |
+| eachrow                  |     0 bytes | typeof(eachrow)                               |
+| eachslice                |     0 bytes | typeof(eachslice)                             |
+| eltype                   |     0 bytes | typeof(eltype)                                |
+| empty                    |     0 bytes | typeof(empty)                                 |
+| empty!                   |     0 bytes | typeof(empty!)                                |
+| endswith                 |     0 bytes | typeof(endswith)                              |
+| enumerate                |     0 bytes | typeof(enumerate)                             |
+| eof                      |     0 bytes | typeof(eof)                                   |
+| eps                      |     0 bytes | typeof(eps)                                   |
+| error                    |     0 bytes | typeof(error)                                 |
+| esc                      |     0 bytes | typeof(esc)                                   |
+| escape_string            |     0 bytes | typeof(escape_string)                         |
+| evalfile                 |     0 bytes | typeof(evalfile)                              |
+| exit                     |     0 bytes | typeof(exit)                                  |
+| exp                      |     0 bytes | typeof(exp)                                   |
+| exp10                    |     0 bytes | typeof(exp10)                                 |
+| exp2                     |     0 bytes | typeof(exp2)                                  |
+| expanduser               |     0 bytes | typeof(expanduser)                            |
+| expm1                    |     0 bytes | typeof(expm1)                                 |
+| exponent                 |     0 bytes | typeof(exponent)                              |
+| extrema                  |     0 bytes | typeof(extrema)                               |
+| factorial                |     0 bytes | typeof(factorial)                             |
+| falses                   |     0 bytes | typeof(falses)                                |
+| fd                       |     0 bytes | typeof(fd)                                    |
+| fdio                     |     0 bytes | typeof(fdio)                                  |
+| fetch                    |     0 bytes | typeof(fetch)                                 |
+| fieldcount               |     0 bytes | typeof(fieldcount)                            |
+| fieldname                |     0 bytes | typeof(fieldname)                             |
+| fieldnames               |     0 bytes | typeof(fieldnames)                            |
+| fieldoffset              |     0 bytes | typeof(fieldoffset)                           |
+| fieldtypes               |     0 bytes | typeof(fieldtypes)                            |
+| filemode                 |     0 bytes | typeof(filemode)                              |
+| filesize                 |     0 bytes | typeof(filesize)                              |
+| fill                     |     0 bytes | typeof(fill)                                  |
+| fill!                    |     0 bytes | typeof(fill!)                                 |
+| filter                   |     0 bytes | typeof(filter)                                |
+| filter!                  |     0 bytes | typeof(filter!)                               |
+| finalize                 |     0 bytes | typeof(finalize)                              |
+| finalizer                |     0 bytes | typeof(finalizer)                             |
+| findall                  |     0 bytes | typeof(findall)                               |
+| findfirst                |     0 bytes | typeof(findfirst)                             |
+| findlast                 |     0 bytes | typeof(findlast)                              |
+| findmax                  |     0 bytes | typeof(findmax)                               |
+| findmax!                 |     0 bytes | typeof(findmax!)                              |
+| findmin                  |     0 bytes | typeof(findmin)                               |
+| findmin!                 |     0 bytes | typeof(findmin!)                              |
+| findnext                 |     0 bytes | typeof(findnext)                              |
+| findprev                 |     0 bytes | typeof(findprev)                              |
+| first                    |     0 bytes | typeof(first)                                 |
+| firstindex               |     0 bytes | typeof(firstindex)                            |
+| fld                      |     0 bytes | typeof(fld)                                   |
+| fld1                     |     0 bytes | typeof(fld1)                                  |
+| fldmod                   |     0 bytes | typeof(fldmod)                                |
+| fldmod1                  |     0 bytes | typeof(fldmod1)                               |
+| flipsign                 |     0 bytes | typeof(flipsign)                              |
+| float                    |     0 bytes | typeof(float)                                 |
+| floatmax                 |     0 bytes | typeof(floatmax)                              |
+| floatmin                 |     0 bytes | typeof(floatmin)                              |
+| floor                    |     0 bytes | typeof(floor)                                 |
+| flush                    |     0 bytes | typeof(flush)                                 |
+| fma                      |     0 bytes | typeof(fma)                                   |
+| foldl                    |     0 bytes | typeof(foldl)                                 |
+| foldr                    |     0 bytes | typeof(foldr)                                 |
+| foreach                  |     0 bytes | typeof(foreach)                               |
+| frexp                    |     0 bytes | typeof(frexp)                                 |
+| fullname                 |     0 bytes | typeof(fullname)                              |
+| functionloc              |     0 bytes | typeof(functionloc)                           |
+| gcd                      |     0 bytes | typeof(gcd)                                   |
+| gcdx                     |     0 bytes | typeof(gcdx)                                  |
+| gensym                   |     0 bytes | typeof(gensym)                                |
+| get                      |     0 bytes | typeof(get)                                   |
+| get!                     |     0 bytes | typeof(get!)                                  |
+| get_zero_subnormals      |     0 bytes | typeof(get_zero_subnormals)                   |
+| gethostname              |     0 bytes | typeof(gethostname)                           |
+| getindex                 |     0 bytes | typeof(getindex)                              |
+| getkey                   |     0 bytes | typeof(getkey)                                |
+| getpid                   |     0 bytes | typeof(getpid)                                |
+| getproperty              |     0 bytes | typeof(getproperty)                           |
+| gperm                    |     0 bytes | typeof(gperm)                                 |
+| hash                     |     0 bytes | typeof(hash)                                  |
+| haskey                   |     0 bytes | typeof(haskey)                                |
+| hasmethod                |     0 bytes | typeof(hasmethod)                             |
+| hcat                     |     0 bytes | typeof(hcat)                                  |
+| hex2bytes                |     0 bytes | typeof(hex2bytes)                             |
+| hex2bytes!               |     0 bytes | typeof(hex2bytes!)                            |
+| homedir                  |     0 bytes | typeof(homedir)                               |
+| htol                     |     0 bytes | typeof(htol)                                  |
+| hton                     |     0 bytes | typeof(hton)                                  |
+| hvcat                    |     0 bytes | typeof(hvcat)                                 |
+| hypot                    |     0 bytes | typeof(hypot)                                 |
+| identity                 |     0 bytes | typeof(identity)                              |
+| ifelse                   |     0 bytes | typeof(ifelse)                                |
+| ignorestatus             |     0 bytes | typeof(ignorestatus)                          |
+| im                       |     2 bytes | Complex{Bool}                                 |
+| imag                     |     0 bytes | typeof(imag)                                  |
+| in                       |     0 bytes | typeof(in)                                    |
+| include_dependency       |     0 bytes | typeof(include_dependency)                    |
+| include_string           |     0 bytes | typeof(include_string)                        |
+| indexin                  |     0 bytes | typeof(indexin)                               |
+| insert!                  |     0 bytes | typeof(insert!)                               |
+| instances                |     0 bytes | typeof(instances)                             |
+| intersect                |     0 bytes | typeof(intersect)                             |
+| intersect!               |     0 bytes | typeof(intersect!)                            |
+| inv                      |     0 bytes | typeof(inv)                                   |
+| invmod                   |     0 bytes | typeof(invmod)                                |
+| invperm                  |     0 bytes | typeof(invperm)                               |
+| invpermute!              |     0 bytes | typeof(invpermute!)                           |
+| isabspath                |     0 bytes | typeof(isabspath)                             |
+| isabstracttype           |     0 bytes | typeof(isabstracttype)                        |
+| isapprox                 |     0 bytes | typeof(isapprox)                              |
+| isascii                  |     0 bytes | typeof(isascii)                               |
+| isassigned               |     0 bytes | typeof(isassigned)                            |
+| isbits                   |     0 bytes | typeof(isbits)                                |
+| isbitstype               |     0 bytes | typeof(isbitstype)                            |
+| isblockdev               |     0 bytes | typeof(isblockdev)                            |
+| ischardev                |     0 bytes | typeof(ischardev)                             |
+| iscntrl                  |     0 bytes | typeof(iscntrl)                               |
+| isconcretetype           |     0 bytes | typeof(isconcretetype)                        |
+| isconst                  |     0 bytes | typeof(isconst)                               |
+| isdigit                  |     0 bytes | typeof(isdigit)                               |
+| isdir                    |     0 bytes | typeof(isdir)                                 |
+| isdirpath                |     0 bytes | typeof(isdirpath)                             |
+| isdispatchtuple          |     0 bytes | typeof(isdispatchtuple)                       |
+| isempty                  |     0 bytes | typeof(isempty)                               |
+| isequal                  |     0 bytes | typeof(isequal)                               |
+| iseven                   |     0 bytes | typeof(iseven)                                |
+| isfifo                   |     0 bytes | typeof(isfifo)                                |
+| isfile                   |     0 bytes | typeof(isfile)                                |
+| isfinite                 |     0 bytes | typeof(isfinite)                              |
+| isimmutable              |     0 bytes | typeof(isimmutable)                           |
+| isinf                    |     0 bytes | typeof(isinf)                                 |
+| isinteger                |     0 bytes | typeof(isinteger)                             |
+| isinteractive            |     0 bytes | typeof(isinteractive)                         |
+| isless                   |     0 bytes | typeof(isless)                                |
+| isletter                 |     0 bytes | typeof(isletter)                              |
+| islink                   |     0 bytes | typeof(islink)                                |
+| islocked                 |     0 bytes | typeof(islocked)                              |
+| islowercase              |     0 bytes | typeof(islowercase)                           |
+| ismarked                 |     0 bytes | typeof(ismarked)                              |
+| ismissing                |     0 bytes | typeof(ismissing)                             |
+| ismount                  |     0 bytes | typeof(ismount)                               |
+| isnan                    |     0 bytes | typeof(isnan)                                 |
+| isnothing                |     0 bytes | typeof(isnothing)                             |
+| isnumeric                |     0 bytes | typeof(isnumeric)                             |
+| isodd                    |     0 bytes | typeof(isodd)                                 |
+| isone                    |     0 bytes | typeof(isone)                                 |
+| isopen                   |     0 bytes | typeof(isopen)                                |
+| ispath                   |     0 bytes | typeof(ispath)                                |
+| isperm                   |     0 bytes | typeof(isperm)                                |
+| ispow2                   |     0 bytes | typeof(ispow2)                                |
+| isprimitivetype          |     0 bytes | typeof(isprimitivetype)                       |
+| isprint                  |     0 bytes | typeof(isprint)                               |
+| ispunct                  |     0 bytes | typeof(ispunct)                               |
+| isqrt                    |     0 bytes | typeof(isqrt)                                 |
+| isreadable               |     0 bytes | typeof(isreadable)                            |
+| isreadonly               |     0 bytes | typeof(isreadonly)                            |
+| isready                  |     0 bytes | typeof(isready)                               |
+| isreal                   |     0 bytes | typeof(isreal)                                |
+| issetequal               |     0 bytes | typeof(issetequal)                            |
+| issetgid                 |     0 bytes | typeof(issetgid)                              |
+| issetuid                 |     0 bytes | typeof(issetuid)                              |
+| issocket                 |     0 bytes | typeof(issocket)                              |
+| issorted                 |     0 bytes | typeof(issorted)                              |
+| isspace                  |     0 bytes | typeof(isspace)                               |
+| issticky                 |     0 bytes | typeof(issticky)                              |
+| isstructtype             |     0 bytes | typeof(isstructtype)                          |
+| issubnormal              |     0 bytes | typeof(issubnormal)                           |
+| issubset                 |     0 bytes | typeof(issubset)                              |
+| istaskdone               |     0 bytes | typeof(istaskdone)                            |
+| istaskstarted            |     0 bytes | typeof(istaskstarted)                         |
+| istextmime               |     0 bytes | typeof(istextmime)                            |
+| isuppercase              |     0 bytes | typeof(isuppercase)                           |
+| isvalid                  |     0 bytes | typeof(isvalid)                               |
+| iswritable               |     0 bytes | typeof(iswritable)                            |
+| isxdigit                 |     0 bytes | typeof(isxdigit)                              |
+| iszero                   |     0 bytes | typeof(iszero)                                |
+| iterate                  |     0 bytes | typeof(iterate)                               |
+| join                     |     0 bytes | typeof(join)                                  |
+| joinpath                 |     0 bytes | typeof(joinpath)                              |
+| keys                     |     0 bytes | typeof(keys)                                  |
+| keytype                  |     0 bytes | typeof(keytype)                               |
+| kill                     |     0 bytes | typeof(kill)                                  |
+| kron                     |     0 bytes | typeof(kron)                                  |
+| last                     |     0 bytes | typeof(last)                                  |
+| lastindex                |     0 bytes | typeof(lastindex)                             |
+| lcm                      |     0 bytes | typeof(lcm)                                   |
+| ldexp                    |     0 bytes | typeof(ldexp)                                 |
+| leading_ones             |     0 bytes | typeof(leading_ones)                          |
+| leading_zeros            |     0 bytes | typeof(leading_zeros)                         |
+| length                   |     0 bytes | typeof(length)                                |
+| lock                     |     0 bytes | typeof(lock)                                  |
+| log                      |     0 bytes | typeof(log)                                   |
+| log10                    |     0 bytes | typeof(log10)                                 |
+| log1p                    |     0 bytes | typeof(log1p)                                 |
+| log2                     |     0 bytes | typeof(log2)                                  |
+| lowercase                |     0 bytes | typeof(lowercase)                             |
+| lowercasefirst           |     0 bytes | typeof(lowercasefirst)                        |
+| lpad                     |     0 bytes | typeof(lpad)                                  |
+| lstat                    |     0 bytes | typeof(lstat)                                 |
+| lstrip                   |     0 bytes | typeof(lstrip)                                |
+| ltoh                     |     0 bytes | typeof(ltoh)                                  |
+| macroexpand              |     0 bytes | typeof(macroexpand)                           |
+| map                      |     0 bytes | typeof(map)                                   |
+| map!                     |     0 bytes | typeof(map!)                                  |
+| mapfoldl                 |     0 bytes | typeof(mapfoldl)                              |
+| mapfoldr                 |     0 bytes | typeof(mapfoldr)                              |
+| mapreduce                |     0 bytes | typeof(mapreduce)                             |
+| mapslices                |     0 bytes | typeof(mapslices)                             |
+| mark                     |     0 bytes | typeof(mark)                                  |
+| match                    |     0 bytes | typeof(match)                                 |
+| max                      |     0 bytes | typeof(max)                                   |
+| maximum                  |     0 bytes | typeof(maximum)                               |
+| maximum!                 |     0 bytes | typeof(maximum!)                              |
+| maxintfloat              |     0 bytes | typeof(maxintfloat)                           |
+| merge                    |     0 bytes | typeof(merge)                                 |
+| merge!                   |     0 bytes | typeof(merge!)                                |
+| methods                  |     0 bytes | typeof(methods)                               |
+| min                      |     0 bytes | typeof(min)                                   |
+| minimum                  |     0 bytes | typeof(minimum)                               |
+| minimum!                 |     0 bytes | typeof(minimum!)                              |
+| minmax                   |     0 bytes | typeof(minmax)                                |
+| missing                  |     0 bytes | Missing                                       |
+| mkdir                    |     0 bytes | typeof(mkdir)                                 |
+| mkpath                   |     0 bytes | typeof(mkpath)                                |
+| mktemp                   |     0 bytes | typeof(mktemp)                                |
+| mktempdir                |     0 bytes | typeof(mktempdir)                             |
+| mod                      |     0 bytes | typeof(mod)                                   |
+| mod1                     |     0 bytes | typeof(mod1)                                  |
+| mod2pi                   |     0 bytes | typeof(mod2pi)                                |
+| modf                     |     0 bytes | typeof(modf)                                  |
+| mtime                    |     0 bytes | typeof(mtime)                                 |
+| muladd                   |     0 bytes | typeof(muladd)                                |
+| mv                       |     0 bytes | typeof(mv)                                    |
+| nameof                   |     0 bytes | typeof(nameof)                                |
+| names                    |     0 bytes | typeof(names)                                 |
+| ncodeunits               |     0 bytes | typeof(ncodeunits)                            |
+| ndigits                  |     0 bytes | typeof(ndigits)                               |
+| ndims                    |     0 bytes | typeof(ndims)                                 |
+| nextfloat                |     0 bytes | typeof(nextfloat)                             |
+| nextind                  |     0 bytes | typeof(nextind)                               |
+| nextpow                  |     0 bytes | typeof(nextpow)                               |
+| nextprod                 |     0 bytes | typeof(nextprod)                              |
+| normpath                 |     0 bytes | typeof(normpath)                              |
+| notify                   |     0 bytes | typeof(notify)                                |
+| ntoh                     |     0 bytes | typeof(ntoh)                                  |
+| ntuple                   |     0 bytes | typeof(ntuple)                                |
+| numerator                |     0 bytes | typeof(numerator)                             |
+| objectid                 |     0 bytes | typeof(objectid)                              |
+| occursin                 |     0 bytes | typeof(occursin)                              |
+| oftype                   |     0 bytes | typeof(oftype)                                |
+| one                      |     0 bytes | typeof(one)                                   |
+| ones                     |     0 bytes | typeof(ones)                                  |
+| oneunit                  |     0 bytes | typeof(oneunit)                               |
+| open                     |     0 bytes | typeof(open)                                  |
+| operm                    |     0 bytes | typeof(operm)                                 |
+| pairs                    |     0 bytes | typeof(pairs)                                 |
+| parent                   |     0 bytes | typeof(parent)                                |
+| parentindices            |     0 bytes | typeof(parentindices)                         |
+| parentmodule             |     0 bytes | typeof(parentmodule)                          |
+| parse                    |     0 bytes | typeof(parse)                                 |
+| partialsort              |     0 bytes | typeof(partialsort)                           |
+| partialsort!             |     0 bytes | typeof(partialsort!)                          |
+| partialsortperm          |     0 bytes | typeof(partialsortperm)                       |
+| partialsortperm!         |     0 bytes | typeof(partialsortperm!)                      |
+| pathof                   |     0 bytes | typeof(pathof)                                |
+| permute!                 |     0 bytes | typeof(permute!)                              |
+| permutedims              |     0 bytes | typeof(permutedims)                           |
+| permutedims!             |     0 bytes | typeof(permutedims!)                          |
+| pi                       |     0 bytes | Irrational{:π}                                |
+| pipeline                 |     0 bytes | typeof(pipeline)                              |
+| pointer                  |     0 bytes | typeof(pointer)                               |
+| pointer_from_objref      |     0 bytes | typeof(pointer_from_objref)                   |
+| pop!                     |     0 bytes | typeof(pop!)                                  |
+| popdisplay               |     0 bytes | typeof(popdisplay)                            |
+| popfirst!                |     0 bytes | typeof(popfirst!)                             |
+| position                 |     0 bytes | typeof(position)                              |
+| powermod                 |     0 bytes | typeof(powermod)                              |
+| precision                |     0 bytes | typeof(precision)                             |
+| precompile               |     0 bytes | typeof(precompile)                            |
+| prepend!                 |     0 bytes | typeof(prepend!)                              |
+| prevfloat                |     0 bytes | typeof(prevfloat)                             |
+| prevind                  |     0 bytes | typeof(prevind)                               |
+| prevpow                  |     0 bytes | typeof(prevpow)                               |
+| print                    |     0 bytes | typeof(print)                                 |
+| println                  |     0 bytes | typeof(println)                               |
+| printstyled              |     0 bytes | typeof(printstyled)                           |
+| process_exited           |     0 bytes | typeof(process_exited)                        |
+| process_running          |     0 bytes | typeof(process_running)                       |
+| prod                     |     0 bytes | typeof(prod)                                  |
+| prod!                    |     0 bytes | typeof(prod!)                                 |
+| promote                  |     0 bytes | typeof(promote)                               |
+| promote_rule             |     0 bytes | typeof(promote_rule)                          |
+| promote_shape            |     0 bytes | typeof(promote_shape)                         |
+| promote_type             |     0 bytes | typeof(promote_type)                          |
+| propertynames            |     0 bytes | typeof(propertynames)                         |
+| push!                    |     0 bytes | typeof(push!)                                 |
+| pushdisplay              |     0 bytes | typeof(pushdisplay)                           |
+| pushfirst!               |     0 bytes | typeof(pushfirst!)                            |
+| put!                     |     0 bytes | typeof(put!)                                  |
+| pwd                      |     0 bytes | typeof(pwd)                                   |
+| rad2deg                  |     0 bytes | typeof(rad2deg)                               |
+| rand                     |     0 bytes | typeof(rand)                                  |
+| randn                    |     0 bytes | typeof(randn)                                 |
+| range                    |     0 bytes | typeof(range)                                 |
+| rationalize              |     0 bytes | typeof(rationalize)                           |
+| read                     |     0 bytes | typeof(read)                                  |
+| read!                    |     0 bytes | typeof(read!)                                 |
+| readavailable            |     0 bytes | typeof(readavailable)                         |
+| readbytes!               |     0 bytes | typeof(readbytes!)                            |
+| readchomp                |     0 bytes | typeof(readchomp)                             |
+| readdir                  |     0 bytes | typeof(readdir)                               |
+| readline                 |     0 bytes | typeof(readline)                              |
+| readlines                |     0 bytes | typeof(readlines)                             |
+| readlink                 |     0 bytes | typeof(readlink)                              |
+| readuntil                |     0 bytes | typeof(readuntil)                             |
+| real                     |     0 bytes | typeof(real)                                  |
+| realpath                 |     0 bytes | typeof(realpath)                              |
+| redirect_stderr          |     0 bytes | typeof(redirect_stderr)                       |
+| redirect_stdin           |     0 bytes | typeof(redirect_stdin)                        |
+| redirect_stdout          |     0 bytes | typeof(redirect_stdout)                       |
+| redisplay                |     0 bytes | typeof(redisplay)                             |
+| reduce                   |     0 bytes | typeof(reduce)                                |
+| reenable_sigint          |     0 bytes | typeof(reenable_sigint)                       |
+| reim                     |     0 bytes | typeof(reim)                                  |
+| reinterpret              |     0 bytes | typeof(reinterpret)                           |
+| relpath                  |     0 bytes | typeof(relpath)                               |
+| rem                      |     0 bytes | typeof(rem)                                   |
+| rem2pi                   |     0 bytes | typeof(rem2pi)                                |
+| repeat                   |     0 bytes | typeof(repeat)                                |
+| replace                  |     0 bytes | typeof(replace)                               |
+| replace!                 |     0 bytes | typeof(replace!)                              |
+| repr                     |     0 bytes | typeof(repr)                                  |
+| reset                    |     0 bytes | typeof(reset)                                 |
+| reshape                  |     0 bytes | typeof(reshape)                               |
+| resize!                  |     0 bytes | typeof(resize!)                               |
+| rethrow                  |     0 bytes | typeof(rethrow)                               |
+| retry                    |     0 bytes | typeof(retry)                                 |
+| reverse                  |     0 bytes | typeof(reverse)                               |
+| reverse!                 |     0 bytes | typeof(reverse!)                              |
+| reverseind               |     0 bytes | typeof(reverseind)                            |
+| rm                       |     0 bytes | typeof(rm)                                    |
+| rot180                   |     0 bytes | typeof(rot180)                                |
+| rotl90                   |     0 bytes | typeof(rotl90)                                |
+| rotr90                   |     0 bytes | typeof(rotr90)                                |
+| round                    |     0 bytes | typeof(round)                                 |
+| rounding                 |     0 bytes | typeof(rounding)                              |
+| rpad                     |     0 bytes | typeof(rpad)                                  |
+| rsplit                   |     0 bytes | typeof(rsplit)                                |
+| rstrip                   |     0 bytes | typeof(rstrip)                                |
+| run                      |     0 bytes | typeof(run)                                   |
+| schedule                 |     0 bytes | typeof(schedule)                              |
+| searchsorted             |     0 bytes | typeof(searchsorted)                          |
+| searchsortedfirst        |     0 bytes | typeof(searchsortedfirst)                     |
+| searchsortedlast         |     0 bytes | typeof(searchsortedlast)                      |
+| sec                      |     0 bytes | typeof(sec)                                   |
+| secd                     |     0 bytes | typeof(secd)                                  |
+| sech                     |     0 bytes | typeof(sech)                                  |
+| seek                     |     0 bytes | typeof(seek)                                  |
+| seekend                  |     0 bytes | typeof(seekend)                               |
+| seekstart                |     0 bytes | typeof(seekstart)                             |
+| selectdim                |     0 bytes | typeof(selectdim)                             |
+| set_zero_subnormals      |     0 bytes | typeof(set_zero_subnormals)                   |
+| setdiff                  |     0 bytes | typeof(setdiff)                               |
+| setdiff!                 |     0 bytes | typeof(setdiff!)                              |
+| setenv                   |     0 bytes | typeof(setenv)                                |
+| setindex!                |     0 bytes | typeof(setindex!)                             |
+| setprecision             |     0 bytes | typeof(setprecision)                          |
+| setproperty!             |     0 bytes | typeof(setproperty!)                          |
+| setrounding              |     0 bytes | typeof(setrounding)                           |
+| show                     |     0 bytes | typeof(show)                                  |
+| showable                 |     0 bytes | typeof(showable)                              |
+| showerror                |     0 bytes | typeof(showerror)                             |
+| sign                     |     0 bytes | typeof(sign)                                  |
+| signbit                  |     0 bytes | typeof(signbit)                               |
+| signed                   |     0 bytes | typeof(signed)                                |
+| significand              |     0 bytes | typeof(significand)                           |
+| similar                  |     0 bytes | typeof(similar)                               |
+| sin                      |     0 bytes | typeof(sin)                                   |
+| sinc                     |     0 bytes | typeof(sinc)                                  |
+| sincos                   |     0 bytes | typeof(sincos)                                |
+| sind                     |     0 bytes | typeof(sind)                                  |
+| sinh                     |     0 bytes | typeof(sinh)                                  |
+| sinpi                    |     0 bytes | typeof(sinpi)                                 |
+| size                     |     0 bytes | typeof(size)                                  |
+| sizehint!                |     0 bytes | typeof(sizehint!)                             |
+| sizeof                   |     0 bytes | typeof(sizeof)                                |
+| skip                     |     0 bytes | typeof(skip)                                  |
+| skipchars                |     0 bytes | typeof(skipchars)                             |
+| skipmissing              |     0 bytes | typeof(skipmissing)                           |
+| sleep                    |     0 bytes | typeof(sleep)                                 |
+| something                |     0 bytes | typeof(something)                             |
+| sort                     |     0 bytes | typeof(sort)                                  |
+| sort!                    |     0 bytes | typeof(sort!)                                 |
+| sortperm                 |     0 bytes | typeof(sortperm)                              |
+| sortperm!                |     0 bytes | typeof(sortperm!)                             |
+| sortslices               |     0 bytes | typeof(sortslices)                            |
+| splice!                  |     0 bytes | typeof(splice!)                               |
+| split                    |     0 bytes | typeof(split)                                 |
+| splitdir                 |     0 bytes | typeof(splitdir)                              |
+| splitdrive               |     0 bytes | typeof(splitdrive)                            |
+| splitext                 |     0 bytes | typeof(splitext)                              |
+| splitpath                |     0 bytes | typeof(splitpath)                             |
+| sprint                   |     0 bytes | typeof(sprint)                                |
+| sqrt                     |     0 bytes | typeof(sqrt)                                  |
+| stacktrace               |     0 bytes | typeof(stacktrace)                            |
+| startswith               |     0 bytes | typeof(startswith)                            |
+| stat                     |     0 bytes | typeof(stat)                                  |
+| stderr                   |   320 bytes | Base.TTY                                      |
+| stdin                    |   320 bytes | Base.TTY                                      |
+| stdout                   |   247 bytes | IOStream                                      |
+| step                     |     0 bytes | typeof(step)                                  |
+| stride                   |     0 bytes | typeof(stride)                                |
+| strides                  |     0 bytes | typeof(strides)                               |
+| string                   |     0 bytes | typeof(string)                                |
+| strip                    |     0 bytes | typeof(strip)                                 |
+| success                  |     0 bytes | typeof(success)                               |
+| sum                      |     0 bytes | typeof(sum)                                   |
+| sum!                     |     0 bytes | typeof(sum!)                                  |
+| summary                  |     0 bytes | typeof(summary)                               |
+| supertype                |     0 bytes | typeof(supertype)                             |
+| symdiff                  |     0 bytes | typeof(symdiff)                               |
+| symdiff!                 |     0 bytes | typeof(symdiff!)                              |
+| symlink                  |     0 bytes | typeof(symlink)                               |
+| systemerror              |     0 bytes | typeof(systemerror)                           |
+| take!                    |     0 bytes | typeof(take!)                                 |
+| tan                      |     0 bytes | typeof(tan)                                   |
+| tand                     |     0 bytes | typeof(tand)                                  |
+| tanh                     |     0 bytes | typeof(tanh)                                  |
+| task_local_storage       |     0 bytes | typeof(task_local_storage)                    |
+| tempdir                  |     0 bytes | typeof(tempdir)                               |
+| tempname                 |     0 bytes | typeof(tempname)                              |
+| textwidth                |     0 bytes | typeof(textwidth)                             |
+| thisind                  |     0 bytes | typeof(thisind)                               |
+| time                     |     0 bytes | typeof(time)                                  |
+| time_ns                  |     0 bytes | typeof(time_ns)                               |
+| timedwait                |     0 bytes | typeof(timedwait)                             |
+| titlecase                |     0 bytes | typeof(titlecase)                             |
+| to_indices               |     0 bytes | typeof(to_indices)                            |
+| touch                    |     0 bytes | typeof(touch)                                 |
+| trailing_ones            |     0 bytes | typeof(trailing_ones)                         |
+| trailing_zeros           |     0 bytes | typeof(trailing_zeros)                        |
+| transcode                |     0 bytes | typeof(transcode)                             |
+| transpose                |     0 bytes | typeof(transpose)                             |
+| trues                    |     0 bytes | typeof(trues)                                 |
+| trunc                    |     0 bytes | typeof(trunc)                                 |
+| truncate                 |     0 bytes | typeof(truncate)                              |
+| trylock                  |     0 bytes | typeof(trylock)                               |
+| tryparse                 |     0 bytes | typeof(tryparse)                              |
+| typeintersect            |     0 bytes | typeof(typeintersect)                         |
+| typejoin                 |     0 bytes | typeof(typejoin)                              |
+| typemax                  |     0 bytes | typeof(typemax)                               |
+| typemin                  |     0 bytes | typeof(typemin)                               |
+| unescape_string          |     0 bytes | typeof(unescape_string)                       |
+| union                    |     0 bytes | typeof(union)                                 |
+| union!                   |     0 bytes | typeof(union!)                                |
+| unique                   |     0 bytes | typeof(unique)                                |
+| unique!                  |     0 bytes | typeof(unique!)                               |
+| unlock                   |     0 bytes | typeof(unlock)                                |
+| unmark                   |     0 bytes | typeof(unmark)                                |
+| unsafe_copyto!           |     0 bytes | typeof(unsafe_copyto!)                        |
+| unsafe_load              |     0 bytes | typeof(unsafe_load)                           |
+| unsafe_pointer_to_objref |     0 bytes | typeof(unsafe_pointer_to_objref)              |
+| unsafe_read              |     0 bytes | typeof(unsafe_read)                           |
+| unsafe_store!            |     0 bytes | typeof(unsafe_store!)                         |
+| unsafe_string            |     0 bytes | typeof(unsafe_string)                         |
+| unsafe_trunc             |     0 bytes | typeof(unsafe_trunc)                          |
+| unsafe_wrap              |     0 bytes | typeof(unsafe_wrap)                           |
+| unsafe_write             |     0 bytes | typeof(unsafe_write)                          |
+| unsigned                 |     0 bytes | typeof(unsigned)                              |
+| uperm                    |     0 bytes | typeof(uperm)                                 |
+| uppercase                |     0 bytes | typeof(uppercase)                             |
+| uppercasefirst           |     0 bytes | typeof(uppercasefirst)                        |
+| valtype                  |     0 bytes | typeof(valtype)                               |
+| values                   |     0 bytes | typeof(values)                                |
+| vcat                     |     0 bytes | typeof(vcat)                                  |
+| vec                      |     0 bytes | typeof(vec)                                   |
+| view                     |     0 bytes | typeof(view)                                  |
+| wait                     |     0 bytes | typeof(wait)                                  |
+| walkdir                  |     0 bytes | typeof(walkdir)                               |
+| which                    |     0 bytes | typeof(which)                                 |
+| widemul                  |     0 bytes | typeof(widemul)                               |
+| widen                    |     0 bytes | typeof(widen)                                 |
+| withenv                  |     0 bytes | typeof(withenv)                               |
+| write                    |     0 bytes | typeof(write)                                 |
+| xor                      |     0 bytes | typeof(xor)                                   |
+| yield                    |     0 bytes | typeof(yield)                                 |
+| yieldto                  |     0 bytes | typeof(yieldto)                               |
+| zero                     |     0 bytes | typeof(zero)                                  |
+| zeros                    |     0 bytes | typeof(zeros)                                 |
+| zip                      |     0 bytes | typeof(zip)                                   |
+| \|                       |     0 bytes | typeof(\|)                                    |
+| \|>                      |     0 bytes | typeof(\|>)                                   |
+| ~                        |     0 bytes | typeof(~)                                     |
+| ÷                        |     0 bytes | typeof(div)                                   |
+| π                        |     0 bytes | Irrational{:π}                                |
+| ℯ                        |     0 bytes | Irrational{:ℯ}                                |
+| ∈                        |     0 bytes | typeof(in)                                    |
+| ∉                        |     0 bytes | typeof(∉)                                     |
+| ∋                        |     0 bytes | typeof(∋)                                     |
+| ∌                        |     0 bytes | typeof(∌)                                     |
+| ∘                        |     0 bytes | typeof(∘)                                     |
+| √                        |     0 bytes | typeof(sqrt)                                  |
+| ∛                        |     0 bytes | typeof(cbrt)                                  |
+| ∩                        |     0 bytes | typeof(intersect)                             |
+| ∪                        |     0 bytes | typeof(union)                                 |
+| ≈                        |     0 bytes | typeof(isapprox)                              |
+| ≉                        |     0 bytes | typeof(≉)                                     |
+| ≠                        |     0 bytes | typeof(!=)                                    |
+| ≡                        |     0 bytes | typeof(===)                                   |
+| ≢                        |     0 bytes | typeof(!==)                                   |
+| ≤                        |     0 bytes | typeof(<=)                                    |
+| ≥                        |     0 bytes | typeof(>=)                                    |
+| ⊆                        |     0 bytes | typeof(issubset)                              |
+| ⊇                        |     0 bytes | typeof(⊇)                                     |
+| ⊈                        |     0 bytes | typeof(⊈)                                     |
+| ⊉                        |     0 bytes | typeof(⊉)                                     |
+| ⊊                        |     0 bytes | typeof(⊊)                                     |
+| ⊋                        |     0 bytes | typeof(⊋)                                     |
+| ⊻                        |     0 bytes | typeof(xor)                                   |
+
+
+ typeof(Base) = 
+Module
+
+ names(Core) = 
+Symbol[:<:, :(===), :AbstractArray, :AbstractChar, :AbstractFloat, :AbstractString, :Any, :ArgumentError, :Array, :AssertionError, :Bool, :BoundsError, :Char, :Core, :Cvoid, :DataType, :DenseArray, :DivideError, :DomainError, :ErrorException, :Exception, :Expr, :Float16, :Float32, :Float64, :Function, :GlobalRef, :IO, :InexactError, :InitError, :Int, :Int128, :Int16, :Int32, :Int64, :Int8, :Integer, :InterruptException, :LineNumberNode, :LoadError, :Main, :Method, :MethodError, :Module, :NTuple, :NamedTuple, :Nothing, :Number, :OutOfMemoryError, :OverflowError, :Ptr, :QuoteNode, :ReadOnlyMemoryError, :Real, :Ref, :SegmentationFault, :Signed, :StackOverflowError, :String, :Symbol, :Task, :Tuple, :Type, :TypeError, :TypeVar, :UInt, :UInt128, :UInt16, :UInt32, :UInt64, :UInt8, :UndefInitializer, :UndefKeywordError, :UndefRefError, :UndefVarError, :Union, :UnionAll, :Unsigned, :Vararg, :VecElement, :WeakRef, :applicable, :eval, :fieldtype, :getfield, :ifelse, :invoke, :isa, :isdefined, :nfields, :nothing, :setfield!, :throw, :tuple, :typeassert, :typeof, :undef]
+
+ varinfo(Core) = 
+| name                |      size | summary            |
+|:------------------- | ---------:|:------------------ |
+| <:                  |   0 bytes | typeof(<:)         |
+| ===                 |   0 bytes | typeof(===)        |
+| AbstractArray       |  80 bytes | UnionAll           |
+| AbstractChar        | 172 bytes | DataType           |
+| AbstractFloat       | 172 bytes | DataType           |
+| AbstractString      | 172 bytes | DataType           |
+| Any                 | 172 bytes | DataType           |
+| ArgumentError       | 188 bytes | DataType           |
+| Array               |  80 bytes | UnionAll           |
+| AssertionError      | 188 bytes | DataType           |
+| Bool                | 172 bytes | DataType           |
+| BoundsError         | 196 bytes | DataType           |
+| Char                | 172 bytes | DataType           |
+| Core                |           | Module             |
+| Cvoid               | 172 bytes | DataType           |
+| DataType            | 340 bytes | DataType           |
+| DenseArray          |  80 bytes | UnionAll           |
+| DivideError         | 172 bytes | DataType           |
+| DomainError         | 196 bytes | DataType           |
+| ErrorException      | 188 bytes | DataType           |
+| Exception           | 172 bytes | DataType           |
+| Expr                | 196 bytes | DataType           |
+| Float16             | 172 bytes | DataType           |
+| Float32             | 172 bytes | DataType           |
+| Float64             | 172 bytes | DataType           |
+| Function            | 172 bytes | DataType           |
+| GlobalRef           | 196 bytes | DataType           |
+| IO                  | 172 bytes | DataType           |
+| InexactError        | 204 bytes | DataType           |
+| InitError           | 196 bytes | DataType           |
+| Int                 | 172 bytes | DataType           |
+| Int128              | 172 bytes | DataType           |
+| Int16               | 172 bytes | DataType           |
+| Int32               | 172 bytes | DataType           |
+| Int64               | 172 bytes | DataType           |
+| Int8                | 172 bytes | DataType           |
+| Integer             | 172 bytes | DataType           |
+| InterruptException  | 172 bytes | DataType           |
+| LineNumberNode      | 196 bytes | DataType           |
+| LoadError           | 204 bytes | DataType           |
+| Main                |           | Module             |
+| Method              | 380 bytes | DataType           |
+| MethodError         | 204 bytes | DataType           |
+| Module              | 196 bytes | DataType           |
+| NTuple              |  80 bytes | UnionAll           |
+| NamedTuple          |  80 bytes | UnionAll           |
+| Nothing             | 172 bytes | DataType           |
+| Number              | 172 bytes | DataType           |
+| OutOfMemoryError    | 172 bytes | DataType           |
+| OverflowError       | 188 bytes | DataType           |
+| Ptr                 |  40 bytes | UnionAll           |
+| QuoteNode           | 188 bytes | DataType           |
+| ReadOnlyMemoryError | 172 bytes | DataType           |
+| Real                | 172 bytes | DataType           |
+| Ref                 |  40 bytes | UnionAll           |
+| SegmentationFault   | 172 bytes | DataType           |
+| Signed              | 172 bytes | DataType           |
+| StackOverflowError  | 172 bytes | DataType           |
+| String              | 172 bytes | DataType           |
+| Symbol              | 172 bytes | DataType           |
+| Task                | 244 bytes | DataType           |
+| Tuple               | 220 bytes | DataType           |
+| Type                |  40 bytes | UnionAll           |
+| TypeError           | 268 bytes | DataType           |
+| TypeVar             | 204 bytes | DataType           |
+| UInt                | 172 bytes | DataType           |
+| UInt128             | 172 bytes | DataType           |
+| UInt16              | 172 bytes | DataType           |
+| UInt32              | 172 bytes | DataType           |
+| UInt64              | 172 bytes | DataType           |
+| UInt8               | 172 bytes | DataType           |
+| UndefInitializer    | 172 bytes | DataType           |
+| UndefKeywordError   | 188 bytes | DataType           |
+| UndefRefError       | 172 bytes | DataType           |
+| UndefVarError       | 188 bytes | DataType           |
+| Union               | 196 bytes | DataType           |
+| UnionAll            | 196 bytes | DataType           |
+| Unsigned            | 172 bytes | DataType           |
+| Vararg              |  80 bytes | UnionAll           |
+| VecElement          |  40 bytes | UnionAll           |
+| WeakRef             | 188 bytes | DataType           |
+| applicable          |   0 bytes | typeof(applicable) |
+| eval                |   0 bytes | typeof(Core.eval)  |
+| fieldtype           |   0 bytes | typeof(fieldtype)  |
+| getfield            |   0 bytes | typeof(getfield)   |
+| ifelse              |   0 bytes | typeof(ifelse)     |
+| invoke              |   0 bytes | typeof(invoke)     |
+| isa                 |   0 bytes | typeof(isa)        |
+| isdefined           |   0 bytes | typeof(isdefined)  |
+| nfields             |   0 bytes | typeof(nfields)    |
+| nothing             |   0 bytes | Nothing            |
+| setfield!           |   0 bytes | typeof(setfield!)  |
+| throw               |   0 bytes | typeof(throw)      |
+| tuple               |   0 bytes | typeof(tuple)      |
+| typeassert          |   0 bytes | typeof(typeassert) |
+| typeof              |   0 bytes | typeof(typeof)     |
+| undef               |   0 bytes | UndefInitializer   |
+
+
+ typeof(Core) = 
+Module
+
+ names(LinearAlgebra) = 
+Symbol[:/, :ARPACKException, :Adjoint, :BLAS, :Bidiagonal, :BunchKaufman, :Cholesky, :CholeskyPivoted, :Diagonal, :Eigen, :Factorization, :GeneralizedEigen, :GeneralizedSVD, :GeneralizedSchur, :Hermitian, :Hessenberg, :I, :LAPACK, :LAPACKException, :LDLt, :LQ, :LU, :LinearAlgebra, :LowerTriangular, :PosDefException, :QR, :QRPivoted, :RankDeficientException, :SVD, :Schur, :SingularException, :SymTridiagonal, :Symmetric, :Transpose, :Tridiagonal, :UniformScaling, :UnitLowerTriangular, :UnitUpperTriangular, :UpperTriangular, :\, :adjoint, :adjoint!, :axpby!, :axpy!, :bunchkaufman, :bunchkaufman!, :cholesky, :cholesky!, :cond, :condskeel, :copy_transpose!, :copyto!, :cross, :det, :diag, :diagind, :diagm, :dot, :eigen, :eigen!, :eigmax, :eigmin, :eigvals, :eigvals!, :eigvecs, :factorize, :givens, :hessenberg, :hessenberg!, :isdiag, :ishermitian, :isposdef, :isposdef!, :issuccess, :issymmetric, :istril, :istriu, :kron, :ldiv!, :ldlt, :ldlt!, :lmul!, :logabsdet, :logdet, :lowrankdowndate, :lowrankdowndate!, :lowrankupdate, :lowrankupdate!, :lq, :lq!, :lu, :lu!, :lyap, :mul!, :norm, :normalize, :normalize!, :nullspace, :opnorm, :ordschur, :ordschur!, :pinv, :qr, :qr!, :rank, :rdiv!, :rmul!, :schur, :schur!, :svd, :svd!, :svdvals, :svdvals!, :sylvester, :tr, :transpose, :transpose!, :tril, :tril!, :triu, :triu!, :×, :⋅]
+
+ varinfo(LinearAlgebra) = 
+| name                   |        size | summary                                |
+|:---------------------- | -----------:|:-------------------------------------- |
+| /                      |     0 bytes | typeof(/)                              |
+| ARPACKException        |   188 bytes | DataType                               |
+| Adjoint                |    80 bytes | UnionAll                               |
+| BLAS                   | 284.313 KiB | Module                                 |
+| Bidiagonal             |    80 bytes | UnionAll                               |
+| BunchKaufman           |   120 bytes | UnionAll                               |
+| Cholesky               |   120 bytes | UnionAll                               |
+| CholeskyPivoted        |   120 bytes | UnionAll                               |
+| Diagonal               |    80 bytes | UnionAll                               |
+| Eigen                  |   240 bytes | UnionAll                               |
+| Factorization          |    40 bytes | UnionAll                               |
+| GeneralizedEigen       |   240 bytes | UnionAll                               |
+| GeneralizedSVD         |    80 bytes | UnionAll                               |
+| GeneralizedSchur       |   120 bytes | UnionAll                               |
+| Hermitian              |   120 bytes | UnionAll                               |
+| Hessenberg             |    80 bytes | UnionAll                               |
+| I                      |      1 byte | LinearAlgebra.UniformScaling{Bool}     |
+| LAPACK                 | 937.297 KiB | Module                                 |
+| LAPACKException        |   188 bytes | DataType                               |
+| LDLt                   |    80 bytes | UnionAll                               |
+| LQ                     |    80 bytes | UnionAll                               |
+| LU                     |    80 bytes | UnionAll                               |
+| LinearAlgebra          |   2.680 MiB | Module                                 |
+| LowerTriangular        |    80 bytes | UnionAll                               |
+| PosDefException        |   188 bytes | DataType                               |
+| QR                     |    80 bytes | UnionAll                               |
+| QRPivoted              |    80 bytes | UnionAll                               |
+| RankDeficientException |   188 bytes | DataType                               |
+| SVD                    |   160 bytes | UnionAll                               |
+| Schur                  |   120 bytes | UnionAll                               |
+| SingularException      |   188 bytes | DataType                               |
+| SymTridiagonal         |    80 bytes | UnionAll                               |
+| Symmetric              |   120 bytes | UnionAll                               |
+| Transpose              |    80 bytes | UnionAll                               |
+| Tridiagonal            |    80 bytes | UnionAll                               |
+| UniformScaling         |    40 bytes | UnionAll                               |
+| UnitLowerTriangular    |    80 bytes | UnionAll                               |
+| UnitUpperTriangular    |    80 bytes | UnionAll                               |
+| UpperTriangular        |    80 bytes | UnionAll                               |
+| \                      |     0 bytes | typeof(\)                              |
+| adjoint                |     0 bytes | typeof(adjoint)                        |
+| adjoint!               |     0 bytes | typeof(LinearAlgebra.adjoint!)         |
+| axpby!                 |     0 bytes | typeof(LinearAlgebra.axpby!)           |
+| axpy!                  |     0 bytes | typeof(LinearAlgebra.axpy!)            |
+| bunchkaufman           |     0 bytes | typeof(LinearAlgebra.bunchkaufman)     |
+| bunchkaufman!          |     0 bytes | typeof(LinearAlgebra.bunchkaufman!)    |
+| cholesky               |     0 bytes | typeof(LinearAlgebra.cholesky)         |
+| cholesky!              |     0 bytes | typeof(LinearAlgebra.cholesky!)        |
+| cond                   |     0 bytes | typeof(LinearAlgebra.cond)             |
+| condskeel              |     0 bytes | typeof(LinearAlgebra.condskeel)        |
+| copy_transpose!        |     0 bytes | typeof(LinearAlgebra.copy_transpose!)  |
+| copyto!                |     0 bytes | typeof(copyto!)                        |
+| cross                  |     0 bytes | typeof(LinearAlgebra.cross)            |
+| det                    |     0 bytes | typeof(LinearAlgebra.det)              |
+| diag                   |     0 bytes | typeof(LinearAlgebra.diag)             |
+| diagind                |     0 bytes | typeof(LinearAlgebra.diagind)          |
+| diagm                  |     0 bytes | typeof(LinearAlgebra.diagm)            |
+| dot                    |     0 bytes | typeof(LinearAlgebra.dot)              |
+| eigen                  |     0 bytes | typeof(LinearAlgebra.eigen)            |
+| eigen!                 |     0 bytes | typeof(LinearAlgebra.eigen!)           |
+| eigmax                 |     0 bytes | typeof(LinearAlgebra.eigmax)           |
+| eigmin                 |     0 bytes | typeof(LinearAlgebra.eigmin)           |
+| eigvals                |     0 bytes | typeof(LinearAlgebra.eigvals)          |
+| eigvals!               |     0 bytes | typeof(LinearAlgebra.eigvals!)         |
+| eigvecs                |     0 bytes | typeof(LinearAlgebra.eigvecs)          |
+| factorize              |     0 bytes | typeof(LinearAlgebra.factorize)        |
+| givens                 |     0 bytes | typeof(LinearAlgebra.givens)           |
+| hessenberg             |     0 bytes | typeof(LinearAlgebra.hessenberg)       |
+| hessenberg!            |     0 bytes | typeof(LinearAlgebra.hessenberg!)      |
+| isdiag                 |     0 bytes | typeof(LinearAlgebra.isdiag)           |
+| ishermitian            |     0 bytes | typeof(LinearAlgebra.ishermitian)      |
+| isposdef               |     0 bytes | typeof(LinearAlgebra.isposdef)         |
+| isposdef!              |     0 bytes | typeof(LinearAlgebra.isposdef!)        |
+| issuccess              |     0 bytes | typeof(LinearAlgebra.issuccess)        |
+| issymmetric            |     0 bytes | typeof(LinearAlgebra.issymmetric)      |
+| istril                 |     0 bytes | typeof(LinearAlgebra.istril)           |
+| istriu                 |     0 bytes | typeof(LinearAlgebra.istriu)           |
+| kron                   |     0 bytes | typeof(kron)                           |
+| ldiv!                  |     0 bytes | typeof(LinearAlgebra.ldiv!)            |
+| ldlt                   |     0 bytes | typeof(LinearAlgebra.ldlt)             |
+| ldlt!                  |     0 bytes | typeof(LinearAlgebra.ldlt!)            |
+| lmul!                  |     0 bytes | typeof(LinearAlgebra.lmul!)            |
+| logabsdet              |     0 bytes | typeof(LinearAlgebra.logabsdet)        |
+| logdet                 |     0 bytes | typeof(LinearAlgebra.logdet)           |
+| lowrankdowndate        |     0 bytes | typeof(LinearAlgebra.lowrankdowndate)  |
+| lowrankdowndate!       |     0 bytes | typeof(LinearAlgebra.lowrankdowndate!) |
+| lowrankupdate          |     0 bytes | typeof(LinearAlgebra.lowrankupdate)    |
+| lowrankupdate!         |     0 bytes | typeof(LinearAlgebra.lowrankupdate!)   |
+| lq                     |     0 bytes | typeof(LinearAlgebra.lq)               |
+| lq!                    |     0 bytes | typeof(LinearAlgebra.lq!)              |
+| lu                     |     0 bytes | typeof(LinearAlgebra.lu)               |
+| lu!                    |     0 bytes | typeof(LinearAlgebra.lu!)              |
+| lyap                   |     0 bytes | typeof(LinearAlgebra.lyap)             |
+| mul!                   |     0 bytes | typeof(LinearAlgebra.mul!)             |
+| norm                   |     0 bytes | typeof(LinearAlgebra.norm)             |
+| normalize              |     0 bytes | typeof(LinearAlgebra.normalize)        |
+| normalize!             |     0 bytes | typeof(LinearAlgebra.normalize!)       |
+| nullspace              |     0 bytes | typeof(LinearAlgebra.nullspace)        |
+| opnorm                 |     0 bytes | typeof(LinearAlgebra.opnorm)           |
+| ordschur               |     0 bytes | typeof(LinearAlgebra.ordschur)         |
+| ordschur!              |     0 bytes | typeof(LinearAlgebra.ordschur!)        |
+| pinv                   |     0 bytes | typeof(LinearAlgebra.pinv)             |
+| qr                     |     0 bytes | typeof(LinearAlgebra.qr)               |
+| qr!                    |     0 bytes | typeof(LinearAlgebra.qr!)              |
+| rank                   |     0 bytes | typeof(LinearAlgebra.rank)             |
+| rdiv!                  |     0 bytes | typeof(LinearAlgebra.rdiv!)            |
+| rmul!                  |     0 bytes | typeof(LinearAlgebra.rmul!)            |
+| schur                  |     0 bytes | typeof(LinearAlgebra.schur)            |
+| schur!                 |     0 bytes | typeof(LinearAlgebra.schur!)           |
+| svd                    |     0 bytes | typeof(LinearAlgebra.svd)              |
+| svd!                   |     0 bytes | typeof(LinearAlgebra.svd!)             |
+| svdvals                |     0 bytes | typeof(LinearAlgebra.svdvals)          |
+| svdvals!               |     0 bytes | typeof(LinearAlgebra.svdvals!)         |
+| sylvester              |     0 bytes | typeof(LinearAlgebra.sylvester)        |
+| tr                     |     0 bytes | typeof(LinearAlgebra.tr)               |
+| transpose              |     0 bytes | typeof(transpose)                      |
+| transpose!             |     0 bytes | typeof(LinearAlgebra.transpose!)       |
+| tril                   |     0 bytes | typeof(LinearAlgebra.tril)             |
+| tril!                  |     0 bytes | typeof(LinearAlgebra.tril!)            |
+| triu                   |     0 bytes | typeof(LinearAlgebra.triu)             |
+| triu!                  |     0 bytes | typeof(LinearAlgebra.triu!)            |
+| ×                      |     0 bytes | typeof(LinearAlgebra.cross)            |
+| ⋅                      |     0 bytes | typeof(LinearAlgebra.dot)              |
+
+
+ typeof(LinearAlgebra) = 
+Module
+
+ names(Pkg) = 
+Symbol[Symbol("@pkg_str"), :PKGMODE_MANIFEST, :PKGMODE_PROJECT, :PackageMode, :PackageSpec, :Pkg, :Registry, :RegistrySpec, :UPLEVEL_MAJOR, :UPLEVEL_MINOR, :UPLEVEL_PATCH, :UpgradeLevel]
+
+ varinfo(Pkg) = 
+| name             |       size | summary                                     |
+|:---------------- | ----------:|:------------------------------------------- |
+| @pkg_str         |    0 bytes | getfield(Pkg.REPLMode, Symbol("#@pkg_str")) |
+| PKGMODE_MANIFEST |    4 bytes | Pkg.Types.PackageMode                       |
+| PKGMODE_PROJECT  |    4 bytes | Pkg.Types.PackageMode                       |
+| PackageMode      |  172 bytes | DataType                                    |
+| PackageSpec      |    0 bytes | typeof(Pkg.API.Package)                     |
+| Pkg              |  3.623 MiB | Module                                      |
+| Registry         | 21.062 KiB | Module                                      |
+| RegistrySpec     |  276 bytes | DataType                                    |
+| UPLEVEL_MAJOR    |    4 bytes | Pkg.Types.UpgradeLevel                      |
+| UPLEVEL_MINOR    |    4 bytes | Pkg.Types.UpgradeLevel                      |
+| UPLEVEL_PATCH    |    4 bytes | Pkg.Types.UpgradeLevel                      |
+| UpgradeLevel     |  172 bytes | DataType                                    |
+
+
+ typeof(Pkg) = 
+Module
+
+ names(PyPlot) = 
+Symbol[Symbol("@L_mstr"), Symbol("@L_str"), :Axes3D, :ColorMap, :Figure, :LaTeXString, :PyPlot, :acorr, :annotate, :arrow, :art3D, :autoscale, :autumn, :axhline, :axhspan, :axis, :axvline, :axvspan, :bar, :bar3D, :barbs, :barh, :bone, :box, :boxplot, :broken_barh, :cla, :clabel, :clf, :clim, :cohere, :colorbar, :colors, :contour, :contour3D, :contourf, :contourf3D, :cool, :copper, :csd, :delaxes, :disconnect, :draw, :errorbar, :eventplot, :figaspect, :figimage, :figlegend, :figtext, :figure, :fill_between, :fill_betweenx, :findobj, :flag, :gca, :gcf, :gci, :get_cmap, :get_cmaps, :get_current_fig_manager, :get_figlabels, :get_fignums, :get_plot_commands, :getindex, :ginput, :gray, :grid, :hexbin, :hist, :hist2D, :hlines, :hold, :hot, :hsv, :imread, :imsave, :imshow, :ioff, :ion, :ishold, :jet, :keys, :latexstring, :legend, :locator_params, :loglog, :margins, :matplotlib, :matshow, :mesh, :minorticks_off, :minorticks_on, :over, :pause, :pcolor, :pcolormesh, :pie, :pink, :plot, :plot3D, :plot_date, :plot_surface, :plot_trisurf, :plot_wireframe, :plotfile, :plt, :polar, :prism, :psd, :pygui, :quiver, :quiverkey, :rc, :rc_context, :rcdefaults, :register_cmap, :rgrids, :savefig, :sca, :scatter, :scatter3D, :sci, :semilogx, :semilogy, :set_cmap, :setindex!, :setp, :show, :specgram, :spectral, :spring, :spy, :stackplot, :stem, :step, :streamplot, :subplot, :subplot2grid, :subplot_tool, :subplots, :subplots_adjust, :summer, :suptitle, :surf, :table, :text, :text2D, :text3D, :thetagrids, :tick_params, :ticklabel_format, :tight_layout, :title, :tricontour, :tricontourf, :tripcolor, :triplot, :twinx, :twiny, :using3D, :vlines, :waitforbuttonpress, :winter, :withfig, :xkcd, :xlabel, :xlim, :xscale, :xticks, :ylabel, :ylim, :yscale, :yticks, :zlabel, :zlim, :zscale, :zticks]
+
+ varinfo(PyPlot) = 
+| name                    |        size | summary                                    |
+|:----------------------- | -----------:|:------------------------------------------ |
+| @L_mstr                 |     0 bytes | getfield(LaTeXStrings, Symbol("#@L_mstr")) |
+| @L_str                  |     0 bytes | getfield(LaTeXStrings, Symbol("#@L_str"))  |
+| Axes3D                  |     0 bytes | typeof(Axes3D)                             |
+| ColorMap                |   188 bytes | DataType                                   |
+| Figure                  |   188 bytes | DataType                                   |
+| LaTeXString             |   188 bytes | DataType                                   |
+| PyPlot                  | 751.032 KiB | Module                                     |
+| acorr                   |     0 bytes | typeof(acorr)                              |
+| annotate                |     0 bytes | typeof(annotate)                           |
+| arrow                   |     0 bytes | typeof(arrow)                              |
+| art3D                   |    58 bytes | PyPlot.LazyPyModule                        |
+| autoscale               |     0 bytes | typeof(autoscale)                          |
+| autumn                  |     0 bytes | typeof(autumn)                             |
+| axhline                 |     0 bytes | typeof(axhline)                            |
+| axhspan                 |     0 bytes | typeof(axhspan)                            |
+| axis                    |     0 bytes | typeof(axis)                               |
+| axvline                 |     0 bytes | typeof(axvline)                            |
+| axvspan                 |     0 bytes | typeof(axvspan)                            |
+| bar                     |     0 bytes | typeof(bar)                                |
+| bar3D                   |     0 bytes | typeof(bar3D)                              |
+| barbs                   |     0 bytes | typeof(barbs)                              |
+| barh                    |     0 bytes | typeof(barh)                               |
+| bone                    |     0 bytes | typeof(bone)                               |
+| box                     |     0 bytes | typeof(box)                                |
+| boxplot                 |     0 bytes | typeof(boxplot)                            |
+| broken_barh             |     0 bytes | typeof(broken_barh)                        |
+| cla                     |     0 bytes | typeof(cla)                                |
+| clabel                  |     0 bytes | typeof(clabel)                             |
+| clf                     |     0 bytes | typeof(clf)                                |
+| clim                    |     0 bytes | typeof(clim)                               |
+| cohere                  |     0 bytes | typeof(cohere)                             |
+| colorbar                |     0 bytes | typeof(colorbar)                           |
+| colors                  |     0 bytes | typeof(colors)                             |
+| contour                 |     0 bytes | typeof(contour)                            |
+| contour3D               |     0 bytes | typeof(contour3D)                          |
+| contourf                |     0 bytes | typeof(contourf)                           |
+| contourf3D              |     0 bytes | typeof(contourf3D)                         |
+| cool                    |     0 bytes | typeof(cool)                               |
+| copper                  |     0 bytes | typeof(copper)                             |
+| csd                     |     0 bytes | typeof(csd)                                |
+| delaxes                 |     0 bytes | typeof(delaxes)                            |
+| disconnect              |     0 bytes | typeof(disconnect)                         |
+| draw                    |     0 bytes | typeof(draw)                               |
+| errorbar                |     0 bytes | typeof(errorbar)                           |
+| eventplot               |     0 bytes | typeof(eventplot)                          |
+| figaspect               |     0 bytes | typeof(figaspect)                          |
+| figimage                |     0 bytes | typeof(figimage)                           |
+| figlegend               |     0 bytes | typeof(figlegend)                          |
+| figtext                 |     0 bytes | typeof(figtext)                            |
+| figure                  |     0 bytes | typeof(figure)                             |
+| fill_between            |     0 bytes | typeof(fill_between)                       |
+| fill_betweenx           |     0 bytes | typeof(fill_betweenx)                      |
+| findobj                 |     0 bytes | typeof(findobj)                            |
+| flag                    |     0 bytes | typeof(flag)                               |
+| gca                     |     0 bytes | typeof(gca)                                |
+| gcf                     |     0 bytes | typeof(gcf)                                |
+| gci                     |     0 bytes | typeof(gci)                                |
+| get_cmap                |     0 bytes | typeof(get_cmap)                           |
+| get_cmaps               |     0 bytes | typeof(get_cmaps)                          |
+| get_current_fig_manager |     0 bytes | typeof(get_current_fig_manager)            |
+| get_figlabels           |     0 bytes | typeof(get_figlabels)                      |
+| get_fignums             |     0 bytes | typeof(get_fignums)                        |
+| get_plot_commands       |     0 bytes | typeof(get_plot_commands)                  |
+| getindex                |     0 bytes | typeof(getindex)                           |
+| ginput                  |     0 bytes | typeof(ginput)                             |
+| gray                    |     0 bytes | typeof(gray)                               |
+| grid                    |     0 bytes | typeof(grid)                               |
+| hexbin                  |     0 bytes | typeof(hexbin)                             |
+| hist                    |     0 bytes | typeof(hist)                               |
+| hist2D                  |     0 bytes | typeof(hist2D)                             |
+| hlines                  |     0 bytes | typeof(hlines)                             |
+| hold                    |     0 bytes | typeof(hold)                               |
+| hot                     |     0 bytes | typeof(hot)                                |
+| hsv                     |     0 bytes | typeof(hsv)                                |
+| imread                  |     0 bytes | typeof(imread)                             |
+| imsave                  |     0 bytes | typeof(imsave)                             |
+| imshow                  |     0 bytes | typeof(imshow)                             |
+| ioff                    |     0 bytes | typeof(ioff)                               |
+| ion                     |     0 bytes | typeof(ion)                                |
+| ishold                  |     0 bytes | typeof(ishold)                             |
+| jet                     |     0 bytes | typeof(jet)                                |
+| keys                    |     0 bytes | typeof(keys)                               |
+| latexstring             |     0 bytes | typeof(latexstring)                        |
+| legend                  |     0 bytes | typeof(legend)                             |
+| locator_params          |     0 bytes | typeof(locator_params)                     |
+| loglog                  |     0 bytes | typeof(loglog)                             |
+| margins                 |     0 bytes | typeof(margins)                            |
+| matplotlib              |     8 bytes | PyCall.PyObject                            |
+| matshow                 |     0 bytes | typeof(matshow)                            |
+| mesh                    |     0 bytes | typeof(mesh)                               |
+| minorticks_off          |     0 bytes | typeof(minorticks_off)                     |
+| minorticks_on           |     0 bytes | typeof(minorticks_on)                      |
+| over                    |     0 bytes | typeof(over)                               |
+| pause                   |     0 bytes | typeof(pause)                              |
+| pcolor                  |     0 bytes | typeof(pcolor)                             |
+| pcolormesh              |     0 bytes | typeof(pcolormesh)                         |
+| pie                     |     0 bytes | typeof(pie)                                |
+| pink                    |     0 bytes | typeof(pink)                               |
+| plot                    |     0 bytes | typeof(plot)                               |
+| plot3D                  |     0 bytes | typeof(plot3D)                             |
+| plot_date               |     0 bytes | typeof(plot_date)                          |
+| plot_surface            |     0 bytes | typeof(plot_surface)                       |
+| plot_trisurf            |     0 bytes | typeof(plot_trisurf)                       |
+| plot_wireframe          |     0 bytes | typeof(plot_wireframe)                     |
+| plotfile                |     0 bytes | typeof(plotfile)                           |
+| plt                     |     8 bytes | PyCall.PyObject                            |
+| polar                   |     0 bytes | typeof(polar)                              |
+| prism                   |     0 bytes | typeof(prism)                              |
+| psd                     |     0 bytes | typeof(psd)                                |
+| pygui                   |     0 bytes | typeof(pygui)                              |
+| quiver                  |     0 bytes | typeof(quiver)                             |
+| quiverkey               |     0 bytes | typeof(quiverkey)                          |
+| rc                      |     0 bytes | typeof(rc)                                 |
+| rc_context              |     0 bytes | typeof(rc_context)                         |
+| rcdefaults              |     0 bytes | typeof(rcdefaults)                         |
+| register_cmap           |     0 bytes | typeof(register_cmap)                      |
+| rgrids                  |     0 bytes | typeof(rgrids)                             |
+| savefig                 |     0 bytes | typeof(savefig)                            |
+| sca                     |     0 bytes | typeof(sca)                                |
+| scatter                 |     0 bytes | typeof(scatter)                            |
+| scatter3D               |     0 bytes | typeof(scatter3D)                          |
+| sci                     |     0 bytes | typeof(sci)                                |
+| semilogx                |     0 bytes | typeof(semilogx)                           |
+| semilogy                |     0 bytes | typeof(semilogy)                           |
+| set_cmap                |     0 bytes | typeof(set_cmap)                           |
+| setindex!               |     0 bytes | typeof(setindex!)                          |
+| setp                    |     0 bytes | typeof(setp)                               |
+| show                    |     0 bytes | typeof(show)                               |
+| specgram                |     0 bytes | typeof(specgram)                           |
+| spectral                |     0 bytes | typeof(spectral)                           |
+| spring                  |     0 bytes | typeof(spring)                             |
+| spy                     |     0 bytes | typeof(spy)                                |
+| stackplot               |     0 bytes | typeof(stackplot)                          |
+| stem                    |     0 bytes | typeof(stem)                               |
+| step                    |     0 bytes | typeof(step)                               |
+| streamplot              |     0 bytes | typeof(streamplot)                         |
+| subplot                 |     0 bytes | typeof(subplot)                            |
+| subplot2grid            |     0 bytes | typeof(subplot2grid)                       |
+| subplot_tool            |     0 bytes | typeof(subplot_tool)                       |
+| subplots                |     0 bytes | typeof(subplots)                           |
+| subplots_adjust         |     0 bytes | typeof(subplots_adjust)                    |
+| summer                  |     0 bytes | typeof(summer)                             |
+| suptitle                |     0 bytes | typeof(suptitle)                           |
+| surf                    |     0 bytes | typeof(surf)                               |
+| table                   |     0 bytes | typeof(table)                              |
+| text                    |     0 bytes | typeof(text)                               |
+| text2D                  |     0 bytes | typeof(text2D)                             |
+| text3D                  |     0 bytes | typeof(text3D)                             |
+| thetagrids              |     0 bytes | typeof(thetagrids)                         |
+| tick_params             |     0 bytes | typeof(tick_params)                        |
+| ticklabel_format        |     0 bytes | typeof(ticklabel_format)                   |
+| tight_layout            |     0 bytes | typeof(tight_layout)                       |
+| title                   |     0 bytes | typeof(title)                              |
+| tricontour              |     0 bytes | typeof(tricontour)                         |
+| tricontourf             |     0 bytes | typeof(tricontourf)                        |
+| tripcolor               |     0 bytes | typeof(tripcolor)                          |
+| triplot                 |     0 bytes | typeof(triplot)                            |
+| twinx                   |     0 bytes | typeof(twinx)                              |
+| twiny                   |     0 bytes | typeof(twiny)                              |
+| using3D                 |     0 bytes | typeof(using3D)                            |
+| vlines                  |     0 bytes | typeof(vlines)                             |
+| waitforbuttonpress      |     0 bytes | typeof(waitforbuttonpress)                 |
+| winter                  |     0 bytes | typeof(winter)                             |
+| withfig                 |     0 bytes | typeof(withfig)                            |
+| xkcd                    |     0 bytes | typeof(xkcd)                               |
+| xlabel                  |     0 bytes | typeof(xlabel)                             |
+| xlim                    |     0 bytes | typeof(xlim)                               |
+| xscale                  |     0 bytes | typeof(xscale)                             |
+| xticks                  |     0 bytes | typeof(xticks)                             |
+| ylabel                  |     0 bytes | typeof(ylabel)                             |
+| ylim                    |     0 bytes | typeof(ylim)                               |
+| yscale                  |     0 bytes | typeof(yscale)                             |
+| yticks                  |     0 bytes | typeof(yticks)                             |
+| zlabel                  |     0 bytes | typeof(zlabel)                             |
+| zlim                    |     0 bytes | typeof(zlim)                               |
+| zscale                  |     0 bytes | typeof(zscale)                             |
+| zticks                  |     0 bytes | typeof(zticks)                             |
+
+
+ typeof(PyPlot) = 
+Module
+
+ names(Plots) = 
+Symbol[Symbol("@animate"), Symbol("@colorant_str"), Symbol("@gif"), Symbol("@layout"), Symbol("@recipe"), Symbol("@series"), Symbol("@shorthands"), Symbol("@userplot"), :ABGR, :ADIN99, :ADIN99d, :ADIN99o, :AGray, :AGray32, :AHSI, :AHSL, :AHSV, :ALCHab, :ALCHuv, :ALMS, :ALab, :ALuv, :ARGB, :ARGB32, :AXYZ, :AYCbCr, :AYIQ, :AbstractBackend, :AbstractGray, :AbstractLayout, :AbstractPlot, :AbstractRGB, :AlphaColor, :Animation, :AxyY, :BGR, :BGRA, :BezierCurve, :CIE1931JV_CMF, :CIE1931J_CMF, :CIE1931_CMF, :CIE1964_CMF, :Color, :Color3, :ColorAlpha, :ColorGradient, :ColorTypes, :Colorant, :ColorantNormed, :Colors, :DE_2000, :DE_94, :DE_AB, :DE_BFD, :DE_CMC, :DE_DIN99, :DE_DIN99d, :DE_DIN99o, :DE_JPC79, :DIN99, :DIN99A, :DIN99d, :DIN99dA, :DIN99o, :DIN99oA, :Formatted, :Fractional, :GR, :Gray, :Gray24, :GrayA, :HSB, :HSI, :HSIA, :HSL, :HSLA, :HSV, :HSVA, :KW, :LCHab, :LCHabA, :LCHuv, :LCHuvA, :LMS, :LMSA, :Lab, :LabA, :Luv, :LuvA, :MSC, :OHLC, :PlotThemes, :PlotUtils, :Plots, :RGB, :RGB1, :RGB24, :RGB4, :RGBA, :RecipeData, :RecipesBase, :Segments, :Shape, :Surface, :Transparent3, :TransparentColor, :TransparentGray, :TransparentRGB, :XYZ, :XYZA, :YCbCr, :YCbCrA, :YIQ, :YIQA, :adapted_grid, :add_theme, :aliases, :alpha, :alphacolor, :animate, :annotate!, :areaplot, :areaplot!, :arrow, :attr!, :backend, :backend_name, :backend_object, :backends, :bar, :bar!, :barh, :barh!, :barhist, :barhist!, :base_color_type, :base_colorant_type, :bbox, :blue, :boxplot, :boxplot!, :brush, :ccolor, :center, :cgrad, :cgradients, :cie_color_match, :clibraries, :clibrary, :closeall, :color, :color_type, :coloralpha, :colordiff, :colormap, :colormatch, :comp1, :comp2, :comp3, :contour, :contour!, :contour3d, :contour3d!, :contourf, :contourf!, :coords, :current, :curve_points, :curves, :curves!, :cvec, :default, :default_cgrad, :density, :density!, :deuteranopic, :distinguishable_colors, :diverging_palette, :font, :frame, :gamutmax, :gamutmin, :get_color_palette, :gif, :gr, :gray, :green, :grid, :gui, :hdf5, :heatmap, :heatmap!, :hex, :hexbin, :hexbin!, :histogram, :histogram!, :histogram2d, :histogram2d!, :hline, :hline!, :hspan, :hspan!, :inline, :inspectdr, :invisible, :isdark, :iter_segments, :mapc, :mapreducec, :mov, :mp4, :ohlc, :ohlc!, :optimize_datetime_ticks, :optimize_ticks, :palette, :path3d, :path3d!, :pgfplots, :pie, :pie!, :plot, :plot!, :plot3d, :plot3d!, :plot_color, :plotarea, :plotattr, :plotly, :plotlyjs, :plots_heatmap, :plots_heatmap!, :png, :portfoliocomposition, :portfoliocomposition!, :protanopic, :pyplot, :quiver, :quiver!, :red, :reducec, :rgb_string, :rgba_string, :rotate, :rotate!, :savefig, :scatter, :scatter!, :scatter3d, :scatter3d!, :scatterhist, :scatterhist!, :sequential_palette, :set_theme, :shape_coords, :showgradient, :showgradient!, :showlibrary, :showlibrary!, :showtheme, :showtheme!, :spy, :spy!, :stephist, :stephist!, :sticks, :sticks!, :stroke, :surface, :surface!, :test_examples, :text, :theme, :title!, :translate, :translate!, :tritanopic, :twinx, :unicodeplots, :violin, :violin!, :vline, :vline!, :vspan, :vspan!, :weighted_color_mean, :whitebalance, :wireframe, :wireframe!, :with, :wrap, :xaxis!, :xflip!, :xgrid!, :xlabel!, :xlims, :xlims!, :xticks!, :xyY, :xyYA, :yaxis!, :yflip!, :ygrid!, :ylabel!, :ylims, :ylims!, :yticks!, :zlims, :zlims!]
+
+ varinfo(Plots) = 
+| name                    |        size | summary                                       |
+|:----------------------- | -----------:|:--------------------------------------------- |
+| @animate                |     0 bytes | getfield(Plots, Symbol("#@animate"))          |
+| @colorant_str           |     0 bytes | getfield(Colors, Symbol("#@colorant_str"))    |
+| @gif                    |     0 bytes | getfield(Plots, Symbol("#@gif"))              |
+| @layout                 |     0 bytes | getfield(Plots, Symbol("#@layout"))           |
+| @recipe                 |     0 bytes | getfield(RecipesBase, Symbol("#@recipe"))     |
+| @series                 |     0 bytes | getfield(RecipesBase, Symbol("#@series"))     |
+| @shorthands             |     0 bytes | getfield(RecipesBase, Symbol("#@shorthands")) |
+| @userplot               |     0 bytes | getfield(RecipesBase, Symbol("#@userplot"))   |
+| ABGR                    |   136 bytes | UnionAll                                      |
+| ADIN99                  |    40 bytes | UnionAll                                      |
+| ADIN99d                 |    40 bytes | UnionAll                                      |
+| ADIN99o                 |    40 bytes | UnionAll                                      |
+| AGray                   |   136 bytes | UnionAll                                      |
+| AGray32                 |   188 bytes | DataType                                      |
+| AHSI                    |    40 bytes | UnionAll                                      |
+| AHSL                    |    40 bytes | UnionAll                                      |
+| AHSV                    |    40 bytes | UnionAll                                      |
+| ALCHab                  |    40 bytes | UnionAll                                      |
+| ALCHuv                  |    40 bytes | UnionAll                                      |
+| ALMS                    |    40 bytes | UnionAll                                      |
+| ALab                    |    40 bytes | UnionAll                                      |
+| ALuv                    |    40 bytes | UnionAll                                      |
+| ARGB                    |   136 bytes | UnionAll                                      |
+| ARGB32                  |   188 bytes | DataType                                      |
+| AXYZ                    |    40 bytes | UnionAll                                      |
+| AYCbCr                  |    40 bytes | UnionAll                                      |
+| AYIQ                    |    40 bytes | UnionAll                                      |
+| AbstractBackend         |   172 bytes | DataType                                      |
+| AbstractGray            |    40 bytes | UnionAll                                      |
+| AbstractLayout          |   172 bytes | DataType                                      |
+| AbstractPlot            |    40 bytes | UnionAll                                      |
+| AbstractRGB             |    40 bytes | UnionAll                                      |
+| AlphaColor              |   120 bytes | UnionAll                                      |
+| Animation               |   196 bytes | DataType                                      |
+| AxyY                    |    40 bytes | UnionAll                                      |
+| BGR                     |   136 bytes | UnionAll                                      |
+| BGRA                    |   136 bytes | UnionAll                                      |
+| BezierCurve             |   120 bytes | UnionAll                                      |
+| CIE1931JV_CMF           |   172 bytes | DataType                                      |
+| CIE1931J_CMF            |   172 bytes | DataType                                      |
+| CIE1931_CMF             |   172 bytes | DataType                                      |
+| CIE1964_CMF             |   172 bytes | DataType                                      |
+| Color                   |    80 bytes | UnionAll                                      |
+| Color3                  |    40 bytes | UnionAll                                      |
+| ColorAlpha              |   120 bytes | UnionAll                                      |
+| ColorGradient           |   196 bytes | DataType                                      |
+| ColorTypes              | 464.138 KiB | Module                                        |
+| Colorant                |    80 bytes | UnionAll                                      |
+| ColorantNormed          |   160 bytes | UnionAll                                      |
+| Colors                  | 414.934 KiB | Module                                        |
+| DE_2000                 |   204 bytes | DataType                                      |
+| DE_94                   |   204 bytes | DataType                                      |
+| DE_AB                   |   172 bytes | DataType                                      |
+| DE_BFD                  |   204 bytes | DataType                                      |
+| DE_CMC                  |   196 bytes | DataType                                      |
+| DE_DIN99                |   172 bytes | DataType                                      |
+| DE_DIN99d               |   172 bytes | DataType                                      |
+| DE_DIN99o               |   172 bytes | DataType                                      |
+| DE_JPC79                |   172 bytes | DataType                                      |
+| DIN99                   |    40 bytes | UnionAll                                      |
+| DIN99A                  |    40 bytes | UnionAll                                      |
+| DIN99d                  |    40 bytes | UnionAll                                      |
+| DIN99dA                 |    40 bytes | UnionAll                                      |
+| DIN99o                  |    40 bytes | UnionAll                                      |
+| DIN99oA                 |    40 bytes | UnionAll                                      |
+| Formatted               |    40 bytes | UnionAll                                      |
+| Fractional              |    96 bytes | Union                                         |
+| GR                      | 856.983 KiB | Module                                        |
+| Gray                    |   152 bytes | UnionAll                                      |
+| Gray24                  |   188 bytes | DataType                                      |
+| GrayA                   |   136 bytes | UnionAll                                      |
+| HSB                     |    40 bytes | UnionAll                                      |
+| HSI                     |    40 bytes | UnionAll                                      |
+| HSIA                    |    40 bytes | UnionAll                                      |
+| HSL                     |    40 bytes | UnionAll                                      |
+| HSLA                    |    40 bytes | UnionAll                                      |
+| HSV                     |    40 bytes | UnionAll                                      |
+| HSVA                    |    40 bytes | UnionAll                                      |
+| KW                      |   260 bytes | DataType                                      |
+| LCHab                   |    40 bytes | UnionAll                                      |
+| LCHabA                  |    40 bytes | UnionAll                                      |
+| LCHuv                   |    40 bytes | UnionAll                                      |
+| LCHuvA                  |    40 bytes | UnionAll                                      |
+| LMS                     |    40 bytes | UnionAll                                      |
+| LMSA                    |    40 bytes | UnionAll                                      |
+| Lab                     |    40 bytes | UnionAll                                      |
+| LabA                    |    40 bytes | UnionAll                                      |
+| Luv                     |    40 bytes | UnionAll                                      |
+| LuvA                    |    40 bytes | UnionAll                                      |
+| MSC                     |     0 bytes | typeof(Colors.MSC)                            |
+| OHLC                    |    40 bytes | UnionAll                                      |
+| PlotThemes              |  53.450 KiB | Module                                        |
+| PlotUtils               | 294.019 KiB | Module                                        |
+| Plots                   |   2.180 MiB | Module                                        |
+| RGB                     |   136 bytes | UnionAll                                      |
+| RGB1                    |   136 bytes | UnionAll                                      |
+| RGB24                   |   188 bytes | DataType                                      |
+| RGB4                    |   136 bytes | UnionAll                                      |
+| RGBA                    |   136 bytes | UnionAll                                      |
+| RecipeData              |   196 bytes | DataType                                      |
+| RecipesBase             | 185.483 KiB | Module                                        |
+| Segments                |    40 bytes | UnionAll                                      |
+| Shape                   |   196 bytes | DataType                                      |
+| Surface                 |    80 bytes | UnionAll                                      |
+| Transparent3            |   120 bytes | UnionAll                                      |
+| TransparentColor        |   200 bytes | UnionAll                                      |
+| TransparentGray         |   120 bytes | UnionAll                                      |
+| TransparentRGB          |   120 bytes | UnionAll                                      |
+| XYZ                     |    40 bytes | UnionAll                                      |
+| XYZA                    |    40 bytes | UnionAll                                      |
+| YCbCr                   |    40 bytes | UnionAll                                      |
+| YCbCrA                  |    40 bytes | UnionAll                                      |
+| YIQ                     |    40 bytes | UnionAll                                      |
+| YIQA                    |    40 bytes | UnionAll                                      |
+| adapted_grid            |     0 bytes | typeof(PlotUtils.adapted_grid)                |
+| add_theme               |     0 bytes | typeof(PlotThemes.add_theme)                  |
+| aliases                 |     0 bytes | typeof(Plots.aliases)                         |
+| alpha                   |     0 bytes | typeof(ColorTypes.alpha)                      |
+| alphacolor              |     0 bytes | typeof(ColorTypes.alphacolor)                 |
+| animate                 |     0 bytes | typeof(RecipesBase.animate)                   |
+| annotate!               |     0 bytes | typeof(Plots.annotate!)                       |
+| areaplot                |     0 bytes | typeof(Plots.areaplot)                        |
+| areaplot!               |     0 bytes | typeof(Plots.areaplot!)                       |
+| arrow                   |     0 bytes | typeof(Plots.arrow)                           |
+| attr!                   |     0 bytes | typeof(Plots.attr!)                           |
+| backend                 |     0 bytes | typeof(Plots.backend)                         |
+| backend_name            |     0 bytes | typeof(Plots.backend_name)                    |
+| backend_object          |     0 bytes | typeof(Plots.backend_object)                  |
+| backends                |     0 bytes | typeof(Plots.backends)                        |
+| bar                     |     0 bytes | typeof(Plots.bar)                             |
+| bar!                    |     0 bytes | typeof(Plots.bar!)                            |
+| barh                    |     0 bytes | typeof(Plots.barh)                            |
+| barh!                   |     0 bytes | typeof(Plots.barh!)                           |
+| barhist                 |     0 bytes | typeof(Plots.barhist)                         |
+| barhist!                |     0 bytes | typeof(Plots.barhist!)                        |
+| base_color_type         |     0 bytes | typeof(ColorTypes.base_color_type)            |
+| base_colorant_type      |     0 bytes | typeof(ColorTypes.base_colorant_type)         |
+| bbox                    |     0 bytes | typeof(Plots.bbox)                            |
+| blue                    |     0 bytes | typeof(ColorTypes.blue)                       |
+| boxplot                 |     0 bytes | typeof(Plots.boxplot)                         |
+| boxplot!                |     0 bytes | typeof(Plots.boxplot!)                        |
+| brush                   |     0 bytes | typeof(Plots.brush)                           |
+| ccolor                  |     0 bytes | typeof(ColorTypes.ccolor)                     |
+| center                  |     0 bytes | typeof(Plots.center)                          |
+| cgrad                   |     0 bytes | typeof(PlotUtils.cgrad)                       |
+| cgradients              |     0 bytes | typeof(PlotUtils.cgradients)                  |
+| cie_color_match         |     0 bytes | typeof(Colors.cie_color_match)                |
+| clibraries              |     0 bytes | typeof(PlotUtils.clibraries)                  |
+| clibrary                |     0 bytes | typeof(PlotUtils.clibrary)                    |
+| closeall                |     0 bytes | typeof(Plots.closeall)                        |
+| color                   |     0 bytes | typeof(ColorTypes.color)                      |
+| color_type              |     0 bytes | typeof(ColorTypes.color_type)                 |
+| coloralpha              |     0 bytes | typeof(ColorTypes.coloralpha)                 |
+| colordiff               |     0 bytes | typeof(Colors.colordiff)                      |
+| colormap                |     0 bytes | typeof(Colors.colormap)                       |
+| colormatch              |     0 bytes | typeof(Colors.colormatch)                     |
+| comp1                   |     0 bytes | typeof(ColorTypes.comp1)                      |
+| comp2                   |     0 bytes | typeof(ColorTypes.comp2)                      |
+| comp3                   |     0 bytes | typeof(ColorTypes.comp3)                      |
+| contour                 |     0 bytes | typeof(Plots.contour)                         |
+| contour!                |     0 bytes | typeof(Plots.contour!)                        |
+| contour3d               |     0 bytes | typeof(Plots.contour3d)                       |
+| contour3d!              |     0 bytes | typeof(Plots.contour3d!)                      |
+| contourf                |     0 bytes | typeof(Plots.contourf)                        |
+| contourf!               |     0 bytes | typeof(Plots.contourf!)                       |
+| coords                  |     0 bytes | typeof(Plots.coords)                          |
+| current                 |     0 bytes | typeof(Plots.current)                         |
+| curve_points            |     0 bytes | typeof(Plots.curve_points)                    |
+| curves                  |     0 bytes | typeof(Plots.curves)                          |
+| curves!                 |     0 bytes | typeof(Plots.curves!)                         |
+| cvec                    |     0 bytes | typeof(PlotUtils.cvec)                        |
+| default                 |     0 bytes | typeof(Plots.default)                         |
+| default_cgrad           |     0 bytes | typeof(PlotUtils.default_cgrad)               |
+| density                 |     0 bytes | typeof(Plots.density)                         |
+| density!                |     0 bytes | typeof(Plots.density!)                        |
+| deuteranopic            |     0 bytes | typeof(Colors.deuteranopic)                   |
+| distinguishable_colors  |     0 bytes | typeof(Colors.distinguishable_colors)         |
+| diverging_palette       |     0 bytes | typeof(Colors.diverging_palette)              |
+| font                    |     0 bytes | typeof(Plots.font)                            |
+| frame                   |     0 bytes | typeof(Plots.frame)                           |
+| gamutmax                |     0 bytes | typeof(ColorTypes.gamutmax)                   |
+| gamutmin                |     0 bytes | typeof(ColorTypes.gamutmin)                   |
+| get_color_palette       |     0 bytes | typeof(PlotUtils.get_color_palette)           |
+| gif                     |     0 bytes | typeof(Plots.gif)                             |
+| gr                      |     0 bytes | typeof(Plots.gr)                              |
+| gray                    |     0 bytes | typeof(ColorTypes.gray)                       |
+| green                   |     0 bytes | typeof(ColorTypes.green)                      |
+| grid                    |     0 bytes | typeof(Plots.grid)                            |
+| gui                     |     0 bytes | typeof(Plots.gui)                             |
+| hdf5                    |     0 bytes | typeof(Plots.hdf5)                            |
+| heatmap                 |     0 bytes | typeof(Plots.heatmap)                         |
+| heatmap!                |     0 bytes | typeof(Plots.heatmap!)                        |
+| hex                     |     0 bytes | typeof(Base.hex)                              |
+| hexbin                  |     0 bytes | typeof(Plots.hexbin)                          |
+| hexbin!                 |     0 bytes | typeof(Plots.hexbin!)                         |
+| histogram               |     0 bytes | typeof(Plots.histogram)                       |
+| histogram!              |     0 bytes | typeof(Plots.histogram!)                      |
+| histogram2d             |     0 bytes | typeof(Plots.histogram2d)                     |
+| histogram2d!            |     0 bytes | typeof(Plots.histogram2d!)                    |
+| hline                   |     0 bytes | typeof(Plots.hline)                           |
+| hline!                  |     0 bytes | typeof(Plots.hline!)                          |
+| hspan                   |     0 bytes | typeof(Plots.hspan)                           |
+| hspan!                  |     0 bytes | typeof(Plots.hspan!)                          |
+| inline                  |     0 bytes | typeof(Plots.inline)                          |
+| inspectdr               |     0 bytes | typeof(Plots.inspectdr)                       |
+| invisible               |     0 bytes | typeof(PlotUtils.invisible)                   |
+| isdark                  |     0 bytes | typeof(PlotUtils.isdark)                      |
+| iter_segments           |     0 bytes | typeof(Plots.iter_segments)                   |
+| mapc                    |     0 bytes | typeof(ColorTypes.mapc)                       |
+| mapreducec              |     0 bytes | typeof(ColorTypes.mapreducec)                 |
+| mov                     |     0 bytes | typeof(Plots.mov)                             |
+| mp4                     |     0 bytes | typeof(Plots.mp4)                             |
+| ohlc                    |     0 bytes | typeof(Plots.ohlc)                            |
+| ohlc!                   |     0 bytes | typeof(Plots.ohlc!)                           |
+| optimize_datetime_ticks |     0 bytes | typeof(PlotUtils.optimize_datetime_ticks)     |
+| optimize_ticks          |     0 bytes | typeof(PlotUtils.optimize_ticks)              |
+| palette                 |     0 bytes | typeof(PlotThemes.palette)                    |
+| path3d                  |     0 bytes | typeof(Plots.path3d)                          |
+| path3d!                 |     0 bytes | typeof(Plots.path3d!)                         |
+| pgfplots                |     0 bytes | typeof(Plots.pgfplots)                        |
+| pie                     |     0 bytes | typeof(Plots.pie)                             |
+| pie!                    |     0 bytes | typeof(Plots.pie!)                            |
+| plot                    |     0 bytes | typeof(RecipesBase.plot)                      |
+| plot!                   |     0 bytes | typeof(RecipesBase.plot!)                     |
+| plot3d                  |     0 bytes | typeof(Plots.plot3d)                          |
+| plot3d!                 |     0 bytes | typeof(Plots.plot3d!)                         |
+| plot_color              |     0 bytes | typeof(PlotUtils.plot_color)                  |
+| plotarea                |     0 bytes | typeof(Plots.plotarea)                        |
+| plotattr                |     0 bytes | typeof(Plots.plotattr)                        |
+| plotly                  |     0 bytes | typeof(Plots.plotly)                          |
+| plotlyjs                |     0 bytes | typeof(Plots.plotlyjs)                        |
+| plots_heatmap           |     0 bytes | typeof(Plots.plots_heatmap)                   |
+| plots_heatmap!          |     0 bytes | typeof(Plots.plots_heatmap!)                  |
+| png                     |     0 bytes | typeof(Plots.png)                             |
+| portfoliocomposition    |     0 bytes | typeof(Plots.portfoliocomposition)            |
+| portfoliocomposition!   |     0 bytes | typeof(Plots.portfoliocomposition!)           |
+| protanopic              |     0 bytes | typeof(Colors.protanopic)                     |
+| pyplot                  |     0 bytes | typeof(Plots.pyplot)                          |
+| quiver                  |     0 bytes | typeof(Plots.quiver)                          |
+| quiver!                 |     0 bytes | typeof(Plots.quiver!)                         |
+| red                     |     0 bytes | typeof(ColorTypes.red)                        |
+| reducec                 |     0 bytes | typeof(ColorTypes.reducec)                    |
+| rgb_string              |     0 bytes | typeof(PlotUtils.rgb_string)                  |
+| rgba_string             |     0 bytes | typeof(PlotUtils.rgba_string)                 |
+| rotate                  |     0 bytes | typeof(Plots.rotate)                          |
+| rotate!                 |     0 bytes | typeof(Plots.rotate!)                         |
+| savefig                 |     0 bytes | typeof(Plots.savefig)                         |
+| scatter                 |     0 bytes | typeof(Plots.scatter)                         |
+| scatter!                |     0 bytes | typeof(Plots.scatter!)                        |
+| scatter3d               |     0 bytes | typeof(Plots.scatter3d)                       |
+| scatter3d!              |     0 bytes | typeof(Plots.scatter3d!)                      |
+| scatterhist             |     0 bytes | typeof(Plots.scatterhist)                     |
+| scatterhist!            |     0 bytes | typeof(Plots.scatterhist!)                    |
+| sequential_palette      |     0 bytes | typeof(Colors.sequential_palette)             |
+| set_theme               |     0 bytes | typeof(Plots.set_theme)                       |
+| shape_coords            |     0 bytes | typeof(Plots.shape_coords)                    |
+| showgradient            |     0 bytes | typeof(Plots.showgradient)                    |
+| showgradient!           |     0 bytes | typeof(Plots.showgradient!)                   |
+| showlibrary             |     0 bytes | typeof(Plots.showlibrary)                     |
+| showlibrary!            |     0 bytes | typeof(Plots.showlibrary!)                    |
+| showtheme               |     0 bytes | typeof(Plots.showtheme)                       |
+| showtheme!              |     0 bytes | typeof(Plots.showtheme!)                      |
+| spy                     |     0 bytes | typeof(Plots.spy)                             |
+| spy!                    |     0 bytes | typeof(Plots.spy!)                            |
+| stephist                |     0 bytes | typeof(Plots.stephist)                        |
+| stephist!               |     0 bytes | typeof(Plots.stephist!)                       |
+| sticks                  |     0 bytes | typeof(Plots.sticks)                          |
+| sticks!                 |     0 bytes | typeof(Plots.sticks!)                         |
+| stroke                  |     0 bytes | typeof(Plots.stroke)                          |
+| surface                 |     0 bytes | typeof(Plots.surface)                         |
+| surface!                |     0 bytes | typeof(Plots.surface!)                        |
+| test_examples           |     0 bytes | typeof(Plots.test_examples)                   |
+| text                    |     0 bytes | typeof(Plots.text)                            |
+| theme                   |     0 bytes | typeof(Plots.theme)                           |
+| title!                  |     0 bytes | typeof(Plots.title!)                          |
+| translate               |     0 bytes | typeof(Plots.translate)                       |
+| translate!              |     0 bytes | typeof(Plots.translate!)                      |
+| tritanopic              |     0 bytes | typeof(Colors.tritanopic)                     |
+| twinx                   |     0 bytes | typeof(Plots.twinx)                           |
+| unicodeplots            |     0 bytes | typeof(Plots.unicodeplots)                    |
+| violin                  |     0 bytes | typeof(Plots.violin)                          |
+| violin!                 |     0 bytes | typeof(Plots.violin!)                         |
+| vline                   |     0 bytes | typeof(Plots.vline)                           |
+| vline!                  |     0 bytes | typeof(Plots.vline!)                          |
+| vspan                   |     0 bytes | typeof(Plots.vspan)                           |
+| vspan!                  |     0 bytes | typeof(Plots.vspan!)                          |
+| weighted_color_mean     |     0 bytes | typeof(Colors.weighted_color_mean)            |
+| whitebalance            |     0 bytes | typeof(Colors.whitebalance)                   |
+| wireframe               |     0 bytes | typeof(Plots.wireframe)                       |
+| wireframe!              |     0 bytes | typeof(Plots.wireframe!)                      |
+| with                    |     0 bytes | typeof(Plots.with)                            |
+| wrap                    |     0 bytes | typeof(Plots.wrap)                            |
+| xaxis!                  |     0 bytes | typeof(Plots.xaxis!)                          |
+| xflip!                  |     0 bytes | typeof(Plots.xflip!)                          |
+| xgrid!                  |     0 bytes | typeof(Plots.xgrid!)                          |
+| xlabel!                 |     0 bytes | typeof(Plots.xlabel!)                         |
+| xlims                   |     0 bytes | typeof(Plots.xlims)                           |
+| xlims!                  |     0 bytes | typeof(Plots.xlims!)                          |
+| xticks!                 |     0 bytes | typeof(Plots.xticks!)                         |
+| xyY                     |    40 bytes | UnionAll                                      |
+| xyYA                    |    40 bytes | UnionAll                                      |
+| yaxis!                  |     0 bytes | typeof(Plots.yaxis!)                          |
+| yflip!                  |     0 bytes | typeof(Plots.yflip!)                          |
+| ygrid!                  |     0 bytes | typeof(Plots.ygrid!)                          |
+| ylabel!                 |     0 bytes | typeof(Plots.ylabel!)                         |
+| ylims                   |     0 bytes | typeof(Plots.ylims)                           |
+| ylims!                  |     0 bytes | typeof(Plots.ylims!)                          |
+| yticks!                 |     0 bytes | typeof(Plots.yticks!)                         |
+| zlims                   |     0 bytes | typeof(Plots.zlims)                           |
+| zlims!                  |     0 bytes | typeof(Plots.zlims!)                          |
+
+
+ typeof(Plots) = 
+Module
+
+
+1.562464513125624e9 Alhamdulillah from WRY in Julia script. 
+

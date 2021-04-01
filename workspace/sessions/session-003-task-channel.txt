@@ -1,0 +1,95 @@
+Parallel Computing
+Julia supports three main categories of features for concurrent and parallel programming:
+1. Asynchronous "tasks", or coroutines
+2. Multi-threading
+3. Distributed computing
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/sessions$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.6.0 (2021-03-24)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia> 
+
+julia> t = @task begin; sleep(5); println("done"); end
+Task (runnable) @0x00007f04bc8b3c70
+
+julia> schedule(t);
+
+julia> done
+julia> 
+
+julia> schedule(t); wait(t)
+ERROR: schedule: Task not runnable
+Stacktrace:
+ [1] error(s::String)
+   @ Base ./error.jl:33
+ [2] enq_work(t::Task)
+   @ Base ./task.jl:573
+ [3] schedule(t::Task)
+   @ Base ./task.jl:599
+ [4] top-level scope
+   @ REPL[4]:1
+
+julia> t = @task begin; sleep(5); println("done"); end
+Task (runnable) @0x00007f04badb9660
+
+julia> schedule(t); wait(t)
+done
+
+julia> 
+julia> function producer(c::Channel)
+       put!(c, "start")
+       for n=1:4
+       put!(c, 2n)
+       end
+       put!(c, "stop")
+       end;
+
+julia> chnl = Channel(producer);
+
+julia> take!(chnl)
+"start"
+
+julia> take!(chnl)
+2
+
+julia> take!(chnl)
+4
+
+julia> take!(chnl)
+6
+
+julia> take!(chnl)
+8
+
+julia> take!(chnl)
+"stop"
+
+julia> 
+julia> for x in Channel(producer)
+       println(x)
+       end
+start
+2
+4
+6
+8
+stop
+
+julia> 
+
+
+julia> 
+[2]+  Stopped                 julia
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/sessions$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

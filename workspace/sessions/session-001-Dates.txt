@@ -1,0 +1,155 @@
+wruslan@HPEliteBk8470p-ubstudio-20:~$ cd github/wruslandra
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra$ ls -al
+total 44
+drwxrwxr-x 11 wruslan wruslan 4096 Apr  1 05:31 .
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 03:12 ..
+drwxrwxr-x  5 wruslan wruslan 4096 Apr  1 12:05 using-dot-graphviz
+drwxrwxr-x  5 wruslan wruslan 4096 Apr  1 12:05 using-eclipse-parallel
+drwxrwxr-x  6 wruslan wruslan 4096 Apr  1 12:07 using-julia
+drwxrwxr-x  8 wruslan wruslan 4096 Apr  1 12:04 using-octave
+drwxrwxr-x  5 wruslan wruslan 4096 Apr  1 12:10 using-python2
+drwxrwxr-x  6 wruslan wruslan 4096 Apr  1 12:10 using-python3
+drwxrwxr-x  8 wruslan wruslan 4096 Apr  1 12:11 using-scilab
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 22 14:07 zEBooks
+drwxrwxr-x  2 wruslan wruslan 4096 Mar 19 09:58 zPHOTOS
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra$
+ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra$ cd using-julia/
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia$ ls -al
+total 28
+drwxrwxr-x  6 wruslan wruslan 4096 Apr  1 12:20 .
+drwxrwxr-x 11 wruslan wruslan 4096 Apr  1 05:31 ..
+drwxrwxr-x  6 wruslan wruslan 4096 Apr  1 12:06 general-docs
+drwxrwxr-x  8 wruslan wruslan 4096 Apr  1 04:52 .git
+-rw-rw-r--  1 wruslan wruslan   27 Mar 19 01:32 README.md
+drwxrwxr-x  2 wruslan wruslan 4096 Apr  1 12:07 wks-1.6.0
+drwxrwxr-x  5 wruslan wruslan 4096 Apr  1 11:46 wks-juliapro
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia$ cd wks-1.6.0/
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ ls -al
+total 8
+drwxrwxr-x 2 wruslan wruslan 4096 Apr  1 12:07 .
+drwxrwxr-x 6 wruslan wruslan 4096 Apr  1 12:20 ..
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.6.0 (2021-03-24)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia> Threads.nthreads()
+1
+
+julia> Threads.threadid()
+1
+
+julia> 
+[1]+  Stopped                 julia
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ export JULIA_NUM_THREADS=4
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.6.0 (2021-03-24)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+
+julia> Threads.nthreads()
+4
+
+julia> Threads.threadid()
+1
+
+julia> Pkg.add("Dates")
+   Resolving package versions...
+    Updating `~/.julia/environments/v1.6/Project.toml`
+  [ade2ca70] + Dates
+  No Changes to `~/.julia/environments/v1.6/Manifest.toml`
+
+julia> using Dates
+
+now_date = Date(2021, 04, 01)
+
+now_Year      = Dates.year(now_date)
+now_Month     = Dates.month(now_date)
+now_MonthName = Dates.monthname(now_date)
+now_Day       = Dates.day(now_date)
+now_DayName   = Dates.dayname(now_date)
+
+Dates.week(now_date)
+Dates.dayofweek(now_date)
+Dates.dayofweekofmonth(now_date)
+Dates.daysinmonth(now_date)
+
+Dates.isleapyear(now_date)
+Dates.dayofyear(now_date)
+Dates.quarterofyear(now_date)
+Dates.dayofquarter(now_date)
+
+julia> now_date = Date(2021, 04, 01)
+2021-04-01
+
+julia> 
+
+julia> now_Year      = Dates.year(now_date)
+2021
+
+julia> now_Month     = Dates.month(now_date)
+4
+
+julia> now_MonthName = Dates.monthname(now_date)
+"April"
+
+julia> now_Day       = Dates.day(now_date)
+1
+
+julia> now_DayName   = Dates.dayname(now_date)
+"Thursday"
+
+julia> 
+
+julia> Dates.week(now_date)
+13
+
+julia> Dates.dayofweek(now_date)
+4
+
+julia> Dates.dayofweekofmonth(now_date)
+1
+
+julia> Dates.daysinmonth(now_date)
+30
+
+julia> 
+
+julia> Dates.isleapyear(now_date)
+false
+
+julia> Dates.dayofyear(now_date)
+91
+
+julia> Dates.quarterofyear(now_date)
+2
+
+julia> Dates.dayofquarter(now_date)
+1
+
+julia> 
+[3]+  Stopped                 julia
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

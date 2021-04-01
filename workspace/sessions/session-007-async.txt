@@ -1,0 +1,87 @@
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia$ cd wks-1.6.0/
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ ls -al
+total 24
+drwxrwxr-x 6 wruslan wruslan 4096 Apr  1 14:26 .
+drwxrwxr-x 6 wruslan wruslan 4096 Apr  1 12:20 ..
+drwxrwxr-x 2 wruslan wruslan 4096 Jul 13  2019 julia-async
+drwxrwxr-x 2 wruslan wruslan 4096 Jul  6  2019 julia-distributed
+drwxrwxr-x 2 wruslan wruslan 4096 Jul 12  2019 julia-parallel
+drwxrwxr-x 2 wruslan wruslan 4096 Apr  1 14:21 sessions
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0$ cd julia-async/
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/julia-async$ ls -al
+total 84
+drwxrwxr-x 2 wruslan wruslan  4096 Jul 13  2019 .
+drwxrwxr-x 6 wruslan wruslan  4096 Apr  1 14:26 ..
+-rw-rw-r-- 1 wruslan wruslan  3543 Jul 13  2019 julia-async-01.jl
+-rw-rw-r-- 1 wruslan wruslan  3331 Jul 13  2019 julia-async-02.jl
+-rw-rw-r-- 1 wruslan wruslan  4728 Jul 13  2019 julia-async-03.jl
+-rw-rw-r-- 1 wruslan wruslan  4745 Jul 13  2019 julia-async-04.jl
+-rw-rw-r-- 1 wruslan wruslan  6046 Jul 13  2019 julia-async-05.jl
+-rw-rw-r-- 1 wruslan wruslan  7264 Jul 13  2019 julia-async-06.jl
+-rw-rw-r-- 1 wruslan wruslan  6654 Jul 13  2019 julia-async-07.jl
+-rw-rw-r-- 1 wruslan wruslan 14668 Jul 13  2019 julia-async-08.jl
+-rw-rw-r-- 1 wruslan wruslan  5819 Jul 13  2019 julia-async-09.jl
+-rw-rw-r-- 1 wruslan wruslan    77 Jul 13  2019 text01.txt
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/julia-async$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/julia-async$ julia julia-async-09.jl
+1.617259174459646e9 Current date today() = 2021-04-01
+1.617259174906079e9 Current date time now: 2021-04-01T14:39:34.906
+1.617259174986134e9 Bismillah from WRY in Julia script. 
+Julia Version 1.6.0
+Commit f9720dc2eb (2021-03-24 12:55 UTC)
+Platform Info:
+  OS: Linux (x86_64-pc-linux-gnu)
+  CPU: Intel(R) Core(TM) i5-3380M CPU @ 2.90GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-11.0.1 (ORCJIT, ivybridge)
+nothing
+
+=== Execute @show run_async_print()
+1.617259176103359e9 0 Execute istaskstarted(task2) = true
+1.617259176129794e9 This is try block.
+1.617259176129843e9 1 task2 = Task (runnable) @0x00007f83331b3b20
+1.617259176159366e9 1 Execute istaskstarted(task2) = true
+1.617259176159408e9 2 task2 = Task (runnable) @0x00007f83331b3b20
+1.617259176159465e9 start_time = 1.617259176159465e9
+1.617259176461092e9 total = 10.0
+1.617259176762829e9 total = 20.0
+1.617259177050569e9 Execute istaskdone(task2) = false
+1.617259177065005e9 total = 30.0
+1.617259177366578e9 total = 40.0
+1.61725917766828e9 total = 50.0
+1.617259177969968e9 total = 60.0
+1.617259178051529e9 Execute istaskdone(task2) = false
+1.61725917827218e9 total = 70.0
+1.617259178573912e9 total = 80.0
+1.617259178875802e9 total = 90.0
+1.617259179052409e9 Execute istaskdone(task2) = false
+1.617259179177975e9 total = 100.0
+1.617259179479663e9 total = 110.0
+1.617259179781347e9 total = 120.0
+1.617259180053936e9 Execute istaskdone(task2) = false
+1.617259180081276e9 total = 130.0
+1.617259180382983e9 total = 140.0
+1.617259180684723e9 total = 150.0
+1.617259180986399e9 total = 160.0
+1.617259181055665e9 Execute istaskdone(task2) = false
+1.617259181288174e9 total = 170.0
+1.617259181288355e9 3 task2 = Task (runnable) @0x00007f83331b3b20
+1.617259181288646e9 2 Execute istaskstarted(task2) = true
+1.617259181288884e9 4 task2 = Task (runnable) @0x00007f83331b3b20
+1.61725918128902e9 This is finally block.
+1.617259182056987e9 Execute istaskdone(task2) = true
+1.617259182057118e9 5 task2 = Task (done) @0x00007f83331b3b20
+
+
+1.617259182057787e9 Alhamdulillah from WRY in Julia script. 
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-julia/wks-1.6.0/julia-async$ 
+
+===========================================================
+
+
+
